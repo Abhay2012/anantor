@@ -118,21 +118,20 @@ function App() {
         <div className="container">
           <div className="hero-content">
             <h2 className="hero-title">
-              Discover Your
-              <span className="gradient-text"> Cosmic Path</span>
+                Anantor: 
+              <span className="gradient-text"> Discover the Cosmos Within</span>
             </h2>
             <p className="hero-description">
-              The ultimate astrology app for Gen Z. Get personalized readings, 
-              daily insights, and connect with the universe like never before.
+            Reveal the mysteries of your soul and the bonds you share. Connect, reflect, and journey through the stars together.
             </p>
             <div className="hero-buttons">
               <button className="cta-button primary">
-                <span>Download Now</span>
+                <span>Begin Your Divine Journey</span>
                 <div className="button-glow"></div>
               </button>
-              <button className="cta-button secondary">
+              {/* <button className="cta-button secondary">
                 <span>Watch Demo</span>
-              </button>
+              </button> */}
             </div>
           </div>
         </div>

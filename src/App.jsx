@@ -138,7 +138,7 @@ function App() {
       </section>
 
       {/* Wisdom Section */}
-      <section className="">
+      <section style={{ paddingBottom: '6rem'}} className="">
         <div className="container">
           <div className="wisdom-content">
             <h2 className="wisdom-heading">

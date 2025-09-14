@@ -138,7 +138,7 @@ function App() {
       </section>
 
       {/* Wisdom Section */}
-      <section className="wisdom-section">
+      <section className="">
         <div className="container">
           <div className="wisdom-content">
             <h2 className="wisdom-heading">
@@ -298,7 +298,7 @@ function App() {
         <div className="container">
           <div className="mockup-content">
             <div className="mockup-text">
-              <h3 className="section-title">The Anantor Way</h3>
+              <h3 style={{textAlign: 'left'}} className="section-title">The Anantor Way</h3>
               <p className="mockup-description">
                   Intuitive. Gentle. Deeply Personal.
               </p>

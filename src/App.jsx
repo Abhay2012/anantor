@@ -137,8 +137,117 @@ function App() {
         </div>
       </section>
 
+      {/* Wisdom Section */}
+      <section className="wisdom-section">
+        <div className="container">
+          <div className="wisdom-content">
+            <h2 className="wisdom-heading">
+              Human Wisdom, <span className="gradient-text">Cosmic Guidance</span>
+            </h2>
+            <h3 className="wisdom-subheading">
+              Ancient Stars, Personal Stories
+            </h3>
+            <p className="wisdom-text">
+              No lines to cross, no waiting for answers. Anantor brings the universe's wisdom into your daily life. Drawing from the poetry of time honored scriptures and the guidance of gifted astrologers, Anantor offers gentle, immediate insights about you and the people who matter most.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Deeper Connections Section */}
+      <section className="deeper-connections-section">
+        <div className="container">
+          <div className="deeper-connections-content">
+            <h2 className="deeper-connections-heading">
+              <span className="gradient-text">Deeper Connections</span>
+            </h2>
+            <h3 className="deeper-connections-subheading">
+              Together, Beneath the Same Stars
+            </h3>
+            
+            <div className="connections-grid">
+              <div className="connection-card">
+                <h4 className="connection-card-title">Shared Journeys</h4>
+                <p className="connection-card-text">
+                  Use your palm to reflect on inner truths, then invite friends to uncover the unique symphony of energies that connects you both. Celebrate the patterns of fate and friendship that the stars illuminate.
+                </p>
+              </div>
+              
+              <div className="connection-card">
+                <h4 className="connection-card-title">Instant Insights, Enduring Meaning</h4>
+                <p className="connection-card-text">
+                  Receive beautiful, personal readings filled with clarity and compassion, not predictions, but maps for mindful living and deeper understanding.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Song of the Planets Section */}
+      <section className="planets-song-section">
+        <div className="container">
+          <div className="planets-song-content">
+            <h2 className="planets-song-heading">
+              The Song of the <span className="gradient-text">Planets</span>
+            </h2>
+            <h3 className="planets-song-subheading">
+              Every Soul is a Constellation
+            </h3>
+            
+            <div className="planets-grid">
+              <div className="planet-card">
+                <div className="planet-icon">☉</div>
+                <h4 className="planet-name">Sun</h4>
+                <p className="planet-description">Your core self, radiant and unique.</p>
+              </div>
+              
+              <div className="planet-card">
+                <div className="planet-icon">☽</div>
+                <h4 className="planet-name">Moon</h4>
+                <p className="planet-description">The tides of feeling and empathy within.</p>
+              </div>
+              
+              <div className="planet-card">
+                <div className="planet-icon">☿</div>
+                <h4 className="planet-name">Mercury</h4>
+                <p className="planet-description">The bridge between minds and hearts.</p>
+              </div>
+              
+              <div className="planet-card">
+                <div className="planet-icon">♀</div>
+                <h4 className="planet-name">Venus</h4>
+                <p className="planet-description">The poetry of love and harmony.</p>
+              </div>
+              
+              <div className="planet-card">
+                <div className="planet-icon">♂</div>
+                <h4 className="planet-name">Mars</h4>
+                <p className="planet-description">The spark of courage and movement.</p>
+              </div>
+              
+              <div className="planet-card">
+                <div className="planet-icon">♃</div>
+                <h4 className="planet-name">Jupiter</h4>
+                <p className="planet-description">Horizons ever expanding, the spirit's journey.</p>
+              </div>
+              
+              {/* <div className="planet-card">
+                <div className="planet-icon">♄</div>
+                <h4 className="planet-name">Saturn</h4>
+                <p className="planet-description">The steady hands of wisdom and growth.</p>
+              </div> */}
+            </div>
+            
+            <p className="planets-conclusion">
+              These celestial companions compose the background music of every friendship and life story.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Color Palette Showcase */}
-      <section className="color-palette">
+      {/* <section className="color-palette">
         <div className="container">
           <h3 className="section-title">Cosmic Color Palette</h3>
           <div className="palette-grid">
@@ -182,23 +291,22 @@ function App() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Phone Mockup Section */}
       <section className="phone-mockup">
         <div className="container">
           <div className="mockup-content">
             <div className="mockup-text">
-              <h3 className="section-title">Experience the Magic</h3>
+              <h3 className="section-title">The Anantor Way</h3>
               <p className="mockup-description">
-                Immerse yourself in stunning visuals and intuitive design. 
-                Every interaction feels like touching the stars.
+                  Intuitive. Gentle. Deeply Personal.
               </p>
               <ul className="feature-list">
-                <li>✨ Personalized birth chart readings</li>
-                <li>🌟 Daily cosmic insights</li>
-                <li>🔮 Compatibility matching</li>
-                <li>📱 Beautiful, intuitive interface</li>
+                <li>✨ Rooted in the living heart of the world’s star wisdom</li>
+                <li>🌟 Palm readings and soulful insights for everyday clarity</li>
+                <li>🔮 Celebrate yourself and your friends, wherever you are</li>
+                <li>📱 Beautiful, serene experience for all</li>
               </ul>
             </div>
             <div className="phone-container">
@@ -236,10 +344,10 @@ function App() {
           <div className="cta-content">
             <h3 className="cta-title">Ready to Explore Your Destiny?</h3>
             <p className="cta-description">
-              Join thousands of Gen Z users discovering their cosmic path
+            Step Into Your Constellation
             </p>
             <button className="download-button">
-              <span className="button-text">Download ANANTOR</span>
+              <span className="button-text">Begin My Story</span>
               <div className="button-particles"></div>
             </button>
             <div className="app-stores">

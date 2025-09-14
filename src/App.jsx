@@ -91,7 +91,7 @@ function App() {
                 alt="ANANTOR Logo" 
                 className={`logo-image ${isScrolled ? 'transitioning' : ''}`}
               />
-              <h1 className="logo">ANANTOR</h1>
+              {/* <h1 className="logo">ANANTOR</h1> */}
             </div>
             <p className="tagline">Your cosmic destiny awaits</p>
           </div>

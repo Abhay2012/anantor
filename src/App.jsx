@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import './App.css'
 
 function App() {
@@ -86,12 +87,13 @@ function App() {
         <div className="container">
           <div className="logo-container">
             <div className="logo-wrapper">
-              <img 
-                src="/anator_logo_transparent.png" 
-                alt="ANANTOR Logo" 
-                className={`logo-image ${isScrolled ? 'transitioning' : ''}`}
-              />
-              {/* <h1 className="logo">ANANTOR</h1> */}
+              <Link to="/">
+                <img 
+                  src="/anator_logo_transparent.png" 
+                  alt="ANANTOR Logo" 
+                  className={`logo-image ${isScrolled ? 'transitioning' : ''}`}
+                />
+              </Link>
             </div>
             <p className="tagline">Your cosmic destiny awaits</p>
           </div>
@@ -102,7 +104,9 @@ function App() {
       <nav className={`fixed-navbar ${isScrolled ? 'visible' : ''}`}>
         <div className="navbar-content">
           <div className="navbar-logo">
-            <img src="/anator_logo_transparent.png" alt="ANANTOR Logo" className="navbar-logo-image" />
+            <Link to="/">
+              <img src="/anator_logo_transparent.png" alt="ANANTOR Logo" className="navbar-logo-image" />
+            </Link>
             <span className="navbar-logo-text">ANANTOR</span>
           </div>
           <div className="navbar-menu">

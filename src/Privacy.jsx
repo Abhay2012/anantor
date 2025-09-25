@@ -1,8 +1,26 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function Privacy() {
   return (
     <div className="app" style={{ paddingTop: '6rem' }}>
+      {/* Permanent Fixed Navbar */}
+      <nav className={`fixed-navbar visible`}>
+        <div className="navbar-content">
+          <div className="navbar-logo">
+            <Link to="/">
+              <img src="/anator_logo_transparent.png" alt="ANANTOR Logo" className="navbar-logo-image" />
+            </Link>
+            <span className="navbar-logo-text">ANANTOR</span>
+          </div>
+          <div className="navbar-menu">
+            {/** <a href="#features" className="navbar-link">Features</a>
+            <a href="#download" className="navbar-link">Download</a> **/}
+            <a href="/contact-us" className="navbar-link">Contact Us</a>
+          </div>
+        </div>
+      </nav>
+
       <section className="container" style={{ maxWidth: 900, margin: '0 auto', padding: '2rem 1rem', color: '#e5e7eb' }}>
         <h1 className="hero-title" style={{ fontSize: '2.25rem', lineHeight: 1.2, marginBottom: '1rem' }}>Privacy Policy</h1>
         <p style={{ opacity: 0.9, marginBottom: '2rem' }}>

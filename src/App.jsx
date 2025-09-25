@@ -106,9 +106,9 @@ function App() {
             <span className="navbar-logo-text">ANANTOR</span>
           </div>
           <div className="navbar-menu">
-            <a href="#features" className="navbar-link">Features</a>
-            <a href="#download" className="navbar-link">Download</a>
-            <a href="#contact" className="navbar-link">Contact</a>
+            {/* <a href="#features" className="navbar-link">Features</a>
+            <a href="#download" className="navbar-link">Download</a> */}
+            <a href="/contact-us" className="navbar-link">Contact Us</a>
           </div>
         </div>
       </nav>
@@ -361,7 +361,12 @@ function App() {
       {/* Footer */}
       <footer className="footer">
         <div className="container">
-          <p>&copy; 2024 ANANTOR. All rights reserved. Made with ✨ for the cosmos.</p>
+          <p>
+            &copy; 2024 ANANTOR. All rights reserved. Made with ✨ for the cosmos. 
+            <span style={{ marginLeft: '0.75rem' }}>
+              <a href="/privacy" style={{ color: '#C7AAFF', textDecoration: 'underline' }}>Privacy Policy</a>
+            </span>
+          </p>
         </div>
       </footer>
     </div>

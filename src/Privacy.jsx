@@ -103,7 +103,7 @@ function Privacy() {
 
       <footer className="footer">
         <div className="container">
-          <p>&copy; 2024 ANANTOR. All rights reserved. Made with ✨ for the cosmos.</p>
+          <p>&copy; 2025 ANANTOR. All rights reserved. Made with ✨ for the cosmos.</p>
         </div>
       </footer>
     </div>

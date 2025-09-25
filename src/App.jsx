@@ -366,7 +366,7 @@ function App() {
       <footer className="footer">
         <div className="container">
           <p>
-            &copy; 2024 ANANTOR. All rights reserved. Made with ✨ for the cosmos. 
+            &copy; 2025 ANANTOR. All rights reserved. Made with ✨ for the cosmos. 
             <span style={{ marginLeft: '0.75rem' }}>
               <a href="/privacy" style={{ color: '#C7AAFF', textDecoration: 'underline' }}>Privacy Policy</a>
             </span>

@@ -315,27 +315,7 @@ function App() {
             </div>
             <div className="phone-container">
               <div className="phone-mockup-device">
-                <div className="phone-screen">
-                  <div className="app-preview">
-                    <div className="app-header">
-                      <div className="status-bar"></div>
-                      <div className="app-title">ANANTOR</div>
-                    </div>
-                    <div className="app-content">
-                      <div className="horoscope-card">
-                        <div className="zodiac-sign">♈</div>
-                        <h4>Today's Reading</h4>
-                        <p>Your cosmic energy is aligned for new beginnings...</p>
-                      </div>
-                      <div className="feature-grid">
-                        <div className="feature-item">🔮 Tarot</div>
-                        <div className="feature-item">🌙 Moon</div>
-                        <div className="feature-item">⭐ Stars</div>
-                        <div className="feature-item">💫 Destiny</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <img src="/anantor_today.png" alt="ANANTOR Logo" className='phone-mockup-image' />
               </div>
             </div>
           </div>

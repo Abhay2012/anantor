@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import Link from 'next/link'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import styles from './home.module.css'
@@ -115,10 +116,13 @@ function HomePage() {
               <div className={styles['feature-item-text']}>
                 <h3 className={styles['feature-item-title']}>Your Daily Cosmic Insights</h3>
                 <p className={styles['feature-item-description']}>Unlock a deeper understanding of yourself with a daily horoscope built from your unique cosmic blueprint. Go beyond general forecasts to explore your inherent strengths, navigate challenges, and align with your true potential.</p>
+                <Link href="/features#feature-horoscope" className={styles['download-button']} style={{ display: 'inline-block', marginTop: 12, textDecoration: "none", padding: "12px 30px", fontSize: "15px" }}>
+                  Explore
+                </Link>
               </div>
               <div className={styles['phone-container']}>
                 <div className={styles['phone-mockup-device']}>
-                  <img src="/anantor_today.png" alt="ANANTOR Logo" className={styles['phone-mockup-image']} />
+                  <img src="https://assets.anantor.com/Screenshot_1759431922.png" alt="Daily Horoscope Screen" className={styles['phone-mockup-image']} />
                 </div>
               </div>
             </div>
@@ -126,12 +130,15 @@ function HomePage() {
             <div className={[styles['feature-item'], styles['feature-item-reverse']].join(' ')} style={{ height: '100vh' }}>
               <div className={styles['phone-container']}>
                 <div className={styles['phone-mockup-device']}>
-                  <img src="/anantor_today.png" alt="ANANTOR Logo" className={styles['phone-mockup-image']} />
+                  <img src="https://assets.anantor.com/Screenshot_1759589285.png" alt="Ask the Universe Anything Screen" className={styles['phone-mockup-image']} />
                 </div>
               </div>
               <div className={styles['feature-item-text']}>
                 <h3 className={styles['feature-item-title']}>Ask the Universe Anything</h3>
                 <p className={styles['feature-item-description']}>Have questions about your career, relationships, health, or personal growth? Anantor lets you ask anything and get an astrological perspective. Our system delivers clear, insightful answers, helping you navigate life's challenges with cosmic wisdom.</p>
+                <Link href="/features#feature-ask" className={styles['download-button']} style={{ display: 'inline-block', marginTop: 12, textDecoration: "none", padding: "12px 30px", fontSize: "15px" }}>
+                  Explore
+                </Link>
               </div>
             </div>
 
@@ -139,10 +146,13 @@ function HomePage() {
               <div className={styles['feature-item-text']}>
                 <h3 className={styles['feature-item-title']}>Discover Cosmic Connections</h3>
                 <p className={styles['feature-item-description']}>Explore the celestial bonds between you and your friends. By analyzing your combined birth charts, Anantor reveals how your energies align, what makes your connection strong, and where there's room to grow together.</p>
+                <Link href="/features#feature-compatibility" className={styles['download-button']} style={{ display: 'inline-block', marginTop: 12, textDecoration: "none", padding: "12px 30px", fontSize: "15px" }}>
+                  Explore
+                </Link>
               </div>
               <div className={styles['phone-container']}>
                 <div className={styles['phone-mockup-device']}>
-                  <img src="/anantor_today.png" alt="ANANTOR Logo" className={styles['phone-mockup-image']} />
+                  <img src="https://assets.anantor.com/Screenshot_1758845474.png" alt="Discover Cosmic Connections Screen" className={styles['phone-mockup-image']} />
                 </div>
               </div>
             </div>

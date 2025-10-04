@@ -15,6 +15,7 @@ export default function Header() {
             {/* <span className={styles.navbarLogoText}>ANANTOR</span> */}
           </div>
           <div className={styles.navbarMenu}>
+            <Link href="/features" className={styles.navbarLink}>Features</Link>
             <Link href="/contact-us" className={styles.navbarLink}>Contact Us</Link>
           </div>
         </div>

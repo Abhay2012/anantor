@@ -1,0 +1,167 @@
+.app {
+    padding: 20px;
+    padding-top: 6rem;
+    max-width: 1440px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    color: #e5e7eb;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.feature-item-subtitle {
+    margin-top: 1rem;
+    background: linear-gradient(135deg, #6B46C1, #EC4899);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.feature-item-description {
+    color: #C7AAFF;
+    margin-bottom: 8px;
+}
+
+.title {
+    font-size: 54px;
+    font-weight: 800;
+    margin-bottom: .75rem;
+    background: linear-gradient(135deg, #6B46C1, #EC4899);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.gradient-text {
+    background: linear-gradient(135deg, #6B46C1, #EC4899, #22D3EE);
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradientShift 3s ease-in-out infinite;
+  }
+
+.subtitle {
+    font-size: 1.1rem;
+    color: #C7AAFF;
+    margin-bottom: 1.25rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.feature-item-detail {
+    font-size: 14px;
+    line-height: 22px;
+}
+
+.intro {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #e5e7eb;
+    opacity: .95;
+}
+
+.feature-item {
+    gap: 100px;
+    justify-content: space-between !important;
+}
+
+/* Remove default bullets for feature list on Features page */
+.feature-list {
+  list-style: none;
+  margin: 12px 0 0 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+}
+.feature-list li {
+  line-height: 1.6;
+  /* display: flex; */
+  gap: 10px;
+  align-items: flex-start;
+}
+.list-icon {
+  /* flex: 0 0 auto;
+  font-size: 1.2rem;
+  line-height: 1.2;
+  margin-top: 2px; */
+  color: #C7AAFF;
+}
+
+/* 3-card summary section */
+.cardsSection {
+  padding: 1rem 0 2rem 0;
+}
+
+.cardsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+  background: rgba(255, 255, 255, .05);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(107, 70, 193, .3);
+  border-radius: 20px;
+  padding: 24px;
+  text-decoration: none;
+  text-align: center;
+  display: block;
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(107, 70, 193, .12), rgba(236, 72, 153, .12));
+  opacity: 0;
+  transition: opacity .25s ease;
+  z-index: -1;
+}
+
+.cardLink:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 50px rgba(0,0,0,.35);
+  border-color: rgba(236, 72, 153, .5);
+}
+
+.cardLink:hover::before,
+.card:hover::before {
+  opacity: 1;
+}
+
+.cardTitle {
+  font-weight: 800;
+  font-size: 20px;
+  margin-bottom: 6px;
+  color: white;
+  /* background: linear-gradient(135deg,#6B46C1,#EC4899);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text; */
+}
+
+.cardDesc {
+  color: #C7AAFF;
+  line-height: 1.6;
+}
+
+@media (max-width: 1024px) {
+  .cardsGrid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 640px) {
+  .cardsGrid { grid-template-columns: 1fr; }
+}

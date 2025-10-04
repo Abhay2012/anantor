@@ -2,17 +2,41 @@ import Header from '../components/Header'
 import Footer from '../components/Footer'
 import styles from './page.module.css'
 import homeStyles from '../home.module.css'
-import Head from 'next/head'
+
+export const dynamic = 'force-static'
+export const metadata = {
+  title: "Anantor Features: Daily Horoscope, Cosmic Q&A & Friend Compatibility",
+  description: "Explore Anantor's three powerful features—personalized daily horoscopes with Today's Forecast, unlimited cosmic questions across 5 categories, and detailed friend compatibility insights.",
+  keywords: [
+    'astrology app features',
+    'personalized horoscope',
+    'daily forecast',
+    'ask astrology questions',
+    'friend compatibility calculator',
+    'birth chart analysis',
+  ],
+  openGraph: {
+    title: 'Anantor Features: Daily Horoscope, Cosmic Q&A & Friend Compatibility',
+    description: "Explore Anantor's three powerful features—personalized daily horoscopes, cosmic questions, and friend compatibility insights.",
+    url: 'https://www.anantor.com/features',
+    siteName: 'Anantor',
+    images: [
+      { url: '/text-logo.png', width: 1200, height: 630, alt: 'Anantor' },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Anantor Features: Daily Horoscope, Cosmic Q&A & Friend Compatibility',
+    description: "Explore Anantor's powerful features—horoscope, Q&A, and compatibility.",
+    images: ['/text-logo.png'],
+  },
+}
 
 export default function FeaturesPage() {
     return (
         <div className={styles.app}>
-            <Head>
-            <title>Anantor Features: Daily Horoscope, Cosmic Q&A & Friend Compatibility</title>
-                <meta name="title" content="Anantor Features: Daily Horoscope, Cosmic Q&A & Friend Compatibility" />
-                <meta name="description" content="Explore Anantor's three powerful features—personalized daily horoscopes with Today's Forecast, unlimited cosmic questions across 5 categories, and detailed friend compatibility insights." />
-                <meta name="keywords" content="astrology app features, personalized horoscope, daily forecast, ask astrology questions, friend compatibility calculator, birth chart analysis" />
-            </Head>
             <Header />
 
             <section className={styles.container}>

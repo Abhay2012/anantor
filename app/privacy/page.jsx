@@ -2,17 +2,33 @@ import Link from 'next/link'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import styles from './page.module.css'
-import Head from 'next/head'
+export const dynamic = 'force-static'
+export const metadata = {
+  title: 'Privacy Policy - Anantor Astrology App',
+  description: 'Learn how Anantor protects your personal data, birth information, and cosmic insights. Your privacy and security are our priority.',
+  keywords: ['astrology app privacy', 'data protection', 'birth chart security'],
+  openGraph: {
+    title: 'Privacy Policy - Anantor Astrology App',
+    description: 'Learn how Anantor protects your personal data, birth information, and cosmic insights.',
+    url: 'https://www.anantor.com/privacy',
+    siteName: 'Anantor',
+    images: [
+      { url: '/text-logo.png', width: 1200, height: 630, alt: 'Anantor' },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Privacy Policy - Anantor Astrology App',
+    description: 'Learn how Anantor protects your personal data, birth information, and cosmic insights.',
+    images: ['/text-logo.png'],
+  },
+}
 
 export default function PrivacyPage() {
   return (
     <div className={styles.app}>
-      <Head>
-        <title>Privacy Policy - Anantor Astrology App</title>
-        <meta name="title" content="Privacy Policy - Anantor Astrology App" />
-        <meta name="description" content="Learn how Anantor protects your personal data, birth information, and cosmic insights. Your privacy and security are our priority." />
-        <meta name="keywords" content="astrology app privacy, data protection, birth chart security" />
-      </Head>
       <Header forceVisible />
 
       <section className={styles.container}>

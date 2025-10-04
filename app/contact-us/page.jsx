@@ -1,17 +1,41 @@
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import styles from './page.module.css'
-import Head from 'next/head'
+
+export const dynamic = 'force-static'
+export const metadata = {
+  title: 'Contact Us - Anantor Astrology App',
+  description: "Get in touch with the Anantor team. Questions about astrology features, technical support, or feedback? We're here to help.",
+  keywords: [
+    'astrology app support',
+    'contact anantor',
+    'support',
+    'feedback',
+    'inquiries',
+    'Anantor',
+  ],
+  openGraph: {
+    title: 'Contact Us - Anantor Astrology App',
+    description: "Get in touch with the Anantor team for support, feedback, or inquiries.",
+    url: 'https://www.anantor.com/contact-us',
+    siteName: 'Anantor',
+    images: [
+      { url: '/text-logo.png', width: 1200, height: 630, alt: 'Anantor' },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Contact Us - Anantor Astrology App',
+    description: 'Get in touch with the Anantor team for support, feedback, or inquiries.',
+    images: ['/text-logo.png'],
+  },
+}
 
 export default function ContactUsPage() {
   return (
     <div className={styles.app}>
-      <Head>
-        <title>Contact Us - Anantor Astrology App</title>
-        <meta name="title" content="Contact Us - Anantor Astrology App" />
-        <meta name="description" content="Get in touch with the Anantor team. Questions about astrology features, technical support, or feedback? We're here to help." />
-        <meta name="keywords" content="astrology app support, contact anantor, support, feedback, inquiries, Anantor" />
-      </Head>
       <Header forceVisible />
 
       <section className={styles.container}>

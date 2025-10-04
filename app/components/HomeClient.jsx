@@ -109,7 +109,7 @@ export default function HomeClient() {
               </div>
             </div>
 
-            <div className={[styles['feature-item'], styles['feature-item-reverse']].join(' ')} style={{ height: '100vh' }}>
+            <div className={[styles['feature-item'], styles['feature-item-reverse']].join(' ')} style={{ minHeight: '100vh' }}>
               <div className={styles['phone-container']}>
                 <div className={styles['phone-mockup-device']}>
                   <img src="https://assets.anantor.com/Screenshot_1759589285.png" alt="Ask the Universe Anything Screen" className={styles['phone-mockup-image']} />

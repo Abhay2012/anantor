@@ -93,7 +93,7 @@ export default function FeaturesPage() {
                         </div>
                     </div>
 
-                    <div id="feature-ask" className={[homeStyles['feature-item'], styles['feature-item']].join(' ')} style={{ height: '100vh' }}>
+                    <div id="feature-ask" className={[homeStyles['feature-item'], styles['feature-item']].join(' ')} style={{ minHeight: '100vh' }}>
                         <div className={homeStyles['feature-item-text']}>
                             <h2 className={homeStyles['feature-item-title']}>Ask the Universe, Get an Answer</h2>
                             <div>

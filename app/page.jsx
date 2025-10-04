@@ -4,10 +4,16 @@ import { useState, useEffect } from 'react'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import styles from './home.module.css'
+import Modal from './components/Modal'
 
 function HomePage() {
   const [stars, setStars] = useState([])
   const [isScrolled, setIsScrolled] = useState(false)
+  const [showModal, setShowModal] = useState(false)
+  const [email, setEmail] = useState('')
+  const [error, setError] = useState('')
+  const [success, setSuccess] = useState('')
+  const [isSubmitting, setIsSubmitting] = useState(false)
 
   useEffect(() => {
     const generateStars = () => {
@@ -91,7 +97,7 @@ function HomePage() {
               Reveal the mysteries of your soul and the bonds you share. Connect, reflect, and journey through the stars together.
             </p>
             <div className={styles['hero-buttons']}>
-              <button className={`${styles['cta-button']} ${styles.primary}`}>
+              <button className={`${styles['cta-button']} ${styles.primary}`} onClick={() => setShowModal(true)}>
                 <span>Begin Your Divine Journey</span>
                 <div className={styles['button-glow']}></div>
               </button>
@@ -265,7 +271,7 @@ function HomePage() {
           <div className={styles['cta-content']}>
             <h3 className={styles['cta-title']}>Ready to Explore Your Destiny?</h3>
             <p className={styles['cta-description']}>Step Into Your Constellation</p>
-            <button className={styles['download-button']}>
+            <button className={styles['download-button']} onClick={() => setShowModal(true)}>
               <span className="button-text">Begin My Story</span>
               <div className={styles['button-particles']}></div>
             </button>
@@ -277,6 +283,83 @@ function HomePage() {
         </div>
       </section>
       <Footer />
+
+      {/* CTA Modal */}
+      <Modal
+        open={showModal}
+        title="Join Anantor"
+        subtext="Please share your email to get early access"
+        onClose={() => { setShowModal(false); setError(''); setSuccess(''); }}
+      >
+        {success ? (
+          <>
+            <div className={styles.success}>{success}</div>
+            <div className={styles.actions}>
+              <button
+                type="button"
+                className={styles.submitBtn}
+                onClick={() => { setShowModal(false); setSuccess(''); setError(''); }}
+              >
+                Close
+              </button>
+            </div>
+          </>
+        ) : (
+          <form
+            onSubmit={async (e) => {
+              e.preventDefault()
+              setError('')
+              setSuccess('')
+              const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+              if (!emailRegex.test(email)) {
+                setError('Please enter a valid email address.')
+                return
+              }
+              try {
+                setIsSubmitting(true)
+                const res = await fetch('https://anantor-api.onrender.com/api/feedback', {
+                  method: 'POST',
+                  headers: { 'Content-Type': 'application/json' },
+                  body: JSON.stringify({ email }),
+                })
+                if (!res.ok) {
+                  const text = await res.text().catch(() => '')
+                  throw new Error(text || 'Request failed')
+                }
+                setSuccess('Thanks! You’re on the list. We’ll send you an email with the steps to get started.')
+                setEmail('')
+              } catch (err) {
+                setError('Something went wrong. Please try again in a moment.')
+              } finally {
+                setIsSubmitting(false)
+              }
+            }}
+            className={styles.form}
+          >
+            <div className="field-group">
+              <input
+                className={styles.input}
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="your@email.com"
+                aria-label="Email address"
+                required
+                disabled={isSubmitting}
+              />
+            </div>
+            {error ? <div className={styles.error}>{error}</div> : null}
+            <div className={styles.actions}>
+              <button type="button" onClick={() => { setShowModal(false); setError(''); setSuccess(''); }} className={styles.cancelBtn} disabled={isSubmitting}>
+                Cancel
+              </button>
+              <button type="submit" className={styles.submitBtn} disabled={isSubmitting}>
+                {isSubmitting ? 'Submitting…' : 'Submit'}
+              </button>
+            </div>
+          </form>
+        )}
+      </Modal>
     </div>
   )
 }

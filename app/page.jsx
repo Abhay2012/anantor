@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import Head from 'next/head'
 import Link from 'next/link'
 import Header from './components/Header'
 import Footer from './components/Footer'
@@ -68,6 +69,12 @@ function HomePage() {
 
   return (
     <div className={styles.app}>
+      <Head>
+        <title>Anantor - Astrology App for Daily Predictions & Cosmic Compatibility</title>
+        <meta name="title" content="Anantor - Astrology App for Daily Predictions & Cosmic Compatibility" />
+        <meta name="description" content="Connect with the planets through Anantor. Get daily astrology predictions, ask questions about your future, and discover compatibility with friends. Free astrology app for teens and beyond." />
+        <meta name="keywords" content="astrology app, daily horoscope, planetary predictions, cosmic compatibility, astrology for teens, ask the universe, friend compatibility" />
+      </Head>
       <Header showTopHeader />
 
       <div className={styles.starfield}>

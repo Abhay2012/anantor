@@ -2,10 +2,17 @@ import Link from 'next/link'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import styles from './page.module.css'
+import Head from 'next/head'
 
 export default function PrivacyPage() {
   return (
     <div className={styles.app}>
+      <Head>
+        <title>Privacy Policy - Anantor Astrology App</title>
+        <meta name="title" content="Privacy Policy - Anantor Astrology App" />
+        <meta name="description" content="Learn how Anantor protects your personal data, birth information, and cosmic insights. Your privacy and security are our priority." />
+        <meta name="keywords" content="astrology app privacy, data protection, birth chart security" />
+      </Head>
       <Header forceVisible />
 
       <section className={styles.container}>

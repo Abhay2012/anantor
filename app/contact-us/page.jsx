@@ -1,10 +1,17 @@
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import styles from './page.module.css'
+import Head from 'next/head'
 
 export default function ContactUsPage() {
   return (
     <div className={styles.app}>
+      <Head>
+        <title>Contact Us - Anantor Astrology App</title>
+        <meta name="title" content="Contact Us - Anantor Astrology App" />
+        <meta name="description" content="Get in touch with the Anantor team. Questions about astrology features, technical support, or feedback? We're here to help." />
+        <meta name="keywords" content="astrology app support, contact anantor, support, feedback, inquiries, Anantor" />
+      </Head>
       <Header forceVisible />
 
       <section className={styles.container}>

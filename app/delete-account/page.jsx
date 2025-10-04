@@ -1,10 +1,17 @@
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import styles from './page.module.css'
+import Head from 'next/head'
 
 export default function DeleteAccountPage() {
   return (
     <div className={styles.app}>
+      <Head>
+        <title>Delete Account - Anantor Astrology App</title>
+        <meta name="title" content="Delete Account - Anantor Astrology App" />
+        <meta name="description" content="We're sorry to see you go. Delete your Anantor account and all associated data securely. Learn what happens when you delete your cosmic profile." />
+        <meta name="keywords" content="delete astrology account, remove account, data deletion, account removal" />
+      </Head>
       <Header forceVisible />
 
       <section className={styles.container}>

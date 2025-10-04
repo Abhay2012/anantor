@@ -2,10 +2,17 @@ import Header from '../components/Header'
 import Footer from '../components/Footer'
 import styles from './page.module.css'
 import homeStyles from '../home.module.css'
+import Head from 'next/head'
 
 export default function FeaturesPage() {
     return (
         <div className={styles.app}>
+            <Head>
+            <title>Anantor Features: Daily Horoscope, Cosmic Q&A & Friend Compatibility</title>
+                <meta name="title" content="Anantor Features: Daily Horoscope, Cosmic Q&A & Friend Compatibility" />
+                <meta name="description" content="Explore Anantor's three powerful features—personalized daily horoscopes with Today's Forecast, unlimited cosmic questions across 5 categories, and detailed friend compatibility insights." />
+                <meta name="keywords" content="astrology app features, personalized horoscope, daily forecast, ask astrology questions, friend compatibility calculator, birth chart analysis" />
+            </Head>
             <Header />
 
             <section className={styles.container}>
@@ -92,7 +99,7 @@ export default function FeaturesPage() {
                                 <h3 className={styles['feature-item-subtitle']}> What Aligns</h3>
                                 <p className={styles['list-icon']}>Your Cosmic Strengths Together. Discover the beautiful ways your cosmic energies harmonize.</p>
                                 <h3 className={styles['feature-item-subtitle']}> What You Differ</h3>
-                                <p className={styles['list-icon']}>Growth Through Contrast. Differences aren't weaknesses, they're opportunities for growth and balance</p>                                
+                                <p className={styles['list-icon']}>Growth Through Contrast. Differences aren't weaknesses, they're opportunities for growth and balance</p>
                                 <h3 className={styles['feature-item-subtitle']}> Planetary Insights</h3>
                                 <p className={styles['list-icon']}>The Cosmic Blueprint of Your Bond. Go deeper with detailed planetary analysis of your friendship.</p>
                             </div>

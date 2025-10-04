@@ -1,0 +1,6 @@
+.app { padding-top: 6rem; }
+.container { max-width: 900px; margin: 0 auto; padding: 2rem 1rem; color: #e5e7eb; }
+.title { font-size: 2.25rem; line-height: 1.2; margin-bottom: 1rem; }
+.sectionTitle { font-size: 1.25rem; margin-bottom: .5rem; color: #C7AAFF; }
+.p { margin-bottom: .5rem; }
+.list { margin-left: 1rem; list-style: disc; display: grid; gap: .5rem; }

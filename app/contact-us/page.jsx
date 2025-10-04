@@ -1,25 +1,15 @@
-import Link from 'next/link'
+import Header from '../components/Header'
+import Footer from '../components/Footer'
+import styles from './page.module.css'
 
 export default function ContactUsPage() {
   return (
-    <div className="app" style={{ paddingTop: '6rem' }}>
-      <nav className={`fixed-navbar visible`}>
-        <div className="navbar-content">
-          <div className="navbar-logo">
-            <Link href="/">
-              <img src="/anator_logo_transparent.png" alt="ANANTOR Logo" className="navbar-logo-image" />
-            </Link>
-            <span className="navbar-logo-text">ANANTOR</span>
-          </div>
-          <div className="navbar-menu">
-            <Link href="/contact-us" className="navbar-link">Contact Us</Link>
-          </div>
-        </div>
-      </nav>
+    <div className={styles.app}>
+      <Header forceVisible />
 
-      <section className="container" style={{ maxWidth: 900, margin: '0 auto', padding: '2rem 1rem', color: '#e5e7eb' }}>
-        <h1 className="hero-title" style={{ fontSize: '2.25rem', lineHeight: 1.2, marginBottom: '1rem' }}>Contact Us</h1>
-        <p style={{ opacity: 0.9, marginBottom: '2rem' }}>
+      <section className={styles.container}>
+        <h1 className={styles.title}>Contact Us</h1>
+        <p className={styles.subtitle}>
           We'd love to hear from you. For support, feedback, partnerships, or general inquiries, reach out using the details below.
         </p>
 
@@ -27,13 +17,13 @@ export default function ContactUsPage() {
           <section>
             <h2 style={{ fontSize: '1.25rem', marginBottom: '0.5rem', color: '#C7AAFF' }}>Email</h2>
             <p>
-              You can contact us at <a href="mailto:contact@anantor.com" style={{ color: '#C7AAFF', textDecoration: 'underline' }}>contact@anantor.com</a>
+              You can contact us at <a href="mailto:contact@anantor.com" className={styles.link}>contact@anantor.com</a>
             </p>
           </section>
 
           <section>
             <h2 style={{ fontSize: '1.25rem', marginBottom: '0.5rem', color: '#C7AAFF' }}>What to Include</h2>
-            <ul style={{ marginLeft: '1rem', listStyle: 'disc', display: 'grid', gap: '0.5rem' }}>
+            <ul className={styles.list}>
               <li>Your name</li>
               <li>A brief description of your request</li>
               <li>Any relevant screenshots or device details (optional)</li>
@@ -42,11 +32,7 @@ export default function ContactUsPage() {
         </div>
       </section>
 
-      <footer className="footer">
-        <div className="container">
-          <p>&copy; 2025 ANANTOR. All rights reserved. Made with ✨ for the cosmos.</p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   )
 }

@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import styles from './page.module.css'
@@ -67,6 +68,12 @@ export default function PrivacyPage() {
           <section>
             <h2 className={styles.sectionTitle}>5. Your Rights</h2>
             <p className={styles.p}>You have the right to access, correct, or delete your personal information. To do so, please contact us at the email address below.</p>
+            <p className={styles.p}>
+              To request account or data deletion, please visit our
+              {' '}
+              <Link href="/delete-account">Delete Account</Link>
+              {' '}page for instructions.
+            </p>
           </section>
 
           <section>

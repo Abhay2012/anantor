@@ -6,3 +6,5 @@
 }
 .footer p { color: #C7AAFF; opacity: 0.7; }
 .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+ .link { color: #C7AAFF; text-decoration: underline; margin-left: 0.75rem; }
+ .links { margin-top: 0.5rem; }

@@ -1,22 +1,18 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import Link from 'next/link'
 
-function ContactUs() {
+export default function ContactUsPage() {
   return (
     <div className="app" style={{ paddingTop: '6rem' }}>
-      {/* Permanent Fixed Navbar */}
       <nav className={`fixed-navbar visible`}>
         <div className="navbar-content">
           <div className="navbar-logo">
-            <Link to="/">
+            <Link href="/">
               <img src="/anator_logo_transparent.png" alt="ANANTOR Logo" className="navbar-logo-image" />
             </Link>
             <span className="navbar-logo-text">ANANTOR</span>
           </div>
           <div className="navbar-menu">
-            {/** <a href="#features" className="navbar-link">Features</a>
-            <a href="#download" className="navbar-link">Download</a> **/}
-            <a href="/contact-us" className="navbar-link">Contact Us</a>
+            <Link href="/contact-us" className="navbar-link">Contact Us</Link>
           </div>
         </div>
       </nav>
@@ -54,5 +50,3 @@ function ContactUs() {
     </div>
   )
 }
-
-export default ContactUs

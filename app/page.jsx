@@ -84,9 +84,9 @@ function HomePage() {
       <section className={styles.hero}>
         <div className={styles.container}>
           <div className={styles['hero-content']}>
-            <h2 className={styles['hero-title']}>
+            <h1 className={styles['hero-title']}>
               <span className={styles['gradient-text']}> Discover the Cosmos Within</span>
-            </h2>
+            </h1>
             <p className={styles['hero-description']}>
               Reveal the mysteries of your soul and the bonds you share. Connect, reflect, and journey through the stars together.
             </p>
@@ -100,7 +100,51 @@ function HomePage() {
         </div>
       </section>
 
-      <section style={{ paddingBottom: '6rem' }} className="">
+      <section style={{ paddingBottom: '6rem' }}>
+        <div className={styles.container}>
+          <h2 className={styles['section-title']}>Explore Your Cosmic Journey</h2>
+          <p className={styles['section-description']}>Anantor brings you powerful ways to connect with planetary energies and understand your place in the cosmos.</p>
+          <div className={styles['section-content']}>
+            <div className={styles['feature-item']}>
+              <div className={styles['feature-item-text']}>
+                <h3 className={styles['feature-item-title']}>Your Daily Cosmic Insights</h3>
+                <p className={styles['feature-item-description']}>Unlock a deeper understanding of yourself with a daily horoscope built from your unique cosmic blueprint. Go beyond general forecasts to explore your inherent strengths, navigate challenges, and align with your true potential.</p>
+              </div>
+              <div className={styles['phone-container']}>
+                <div className={styles['phone-mockup-device']}>
+                  <img src="/anantor_today.png" alt="ANANTOR Logo" className={styles['phone-mockup-image']} />
+                </div>
+              </div>
+            </div>
+
+            <div className={[styles['feature-item'], styles['feature-item-reverse']].join(' ')} style={{ height: '100vh' }}>
+              <div className={styles['phone-container']}>
+                <div className={styles['phone-mockup-device']}>
+                  <img src="/anantor_today.png" alt="ANANTOR Logo" className={styles['phone-mockup-image']} />
+                </div>
+              </div>
+              <div className={styles['feature-item-text']}>
+                <h3 className={styles['feature-item-title']}>Ask the Universe Anything</h3>
+                <p className={styles['feature-item-description']}>Have questions about your career, relationships, health, or personal growth? Anantor lets you ask anything and get an astrological perspective. Our system delivers clear, insightful answers, helping you navigate life's challenges with cosmic wisdom.</p>
+              </div>
+            </div>
+
+            <div className={styles['feature-item']}>
+              <div className={styles['feature-item-text']}>
+                <h3 className={styles['feature-item-title']}>Discover Cosmic Connections</h3>
+                <p className={styles['feature-item-description']}>Explore the celestial bonds between you and your friends. By analyzing your combined birth charts, Anantor reveals how your energies align, what makes your connection strong, and where there's room to grow together.</p>
+              </div>
+              <div className={styles['phone-container']}>
+                <div className={styles['phone-mockup-device']}>
+                  <img src="/anantor_today.png" alt="ANANTOR Logo" className={styles['phone-mockup-image']} />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* <section style={{ paddingBottom: '6rem' }} className="">
         <div className={styles.container}>
           <div className={styles['wisdom-content']}>
             <h2 className={styles['wisdom-heading']}>
@@ -112,9 +156,9 @@ function HomePage() {
             </p>
           </div>
         </div>
-      </section>
+      </section> */}
 
-      <section className={styles['deeper-connections-section']}>
+      {/* <section className={styles['deeper-connections-section']}>
         <div className={styles.container}>
           <div className={styles['deeper-connections-content']}>
             <h2 className={styles['deeper-connections-heading']}>
@@ -139,15 +183,15 @@ function HomePage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <section className={styles['planets-song-section']}>
         <div className={styles.container}>
           <div className={styles['planets-song-content']}>
-            <h2 className={styles['planets-song-heading']}>
+            <h2 className={styles['section-title']}>
               The Song of the <span className={styles['gradient-text']}>Planets</span>
             </h2>
-            <h3 className={styles['planets-song-subheading']}>Every Soul is a Constellation</h3>
+            <p className={styles['section-description']}>Every Soul is a Constellation</p>
 
             <div className={styles['planets-grid']}>
               <div className={styles['planet-card']}>
@@ -194,7 +238,7 @@ function HomePage() {
         </div>
       </section>
 
-      <section className={styles['phone-mockup']}>
+      {/* <section className={styles['phone-mockup']}>
         <div className={styles.container}>
           <div className={styles['mockup-content']}>
             <div className={styles['mockup-text']}>
@@ -214,7 +258,7 @@ function HomePage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <section className={styles['cta-section']}>
         <div className={styles.container}>
@@ -225,10 +269,10 @@ function HomePage() {
               <span className="button-text">Begin My Story</span>
               <div className={styles['button-particles']}></div>
             </button>
-            <div className={styles['app-stores']}>
+            {/* <div className={styles['app-stores']}>
               <div className={styles['store-badge']}>App Store</div>
               <div className={styles['store-badge']}>Google Play</div>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>

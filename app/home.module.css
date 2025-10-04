@@ -44,6 +44,9 @@
   position: relative;
   z-index: 2;
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Hero */
@@ -292,7 +295,7 @@
 }
 
 .planets-song-content {
-  max-width: 1200px;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -317,7 +320,8 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
-  margin-bottom: 3rem;
+  margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
 }
 
 .planet-card {
@@ -424,14 +428,45 @@
 }
 
 .section-title {
-  font-size: 3rem;
+  font-size: 45px;
   font-weight: 700;
   text-align: center;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.5rem;
+  /* color: #fff; */
   background: linear-gradient(135deg, #6B46C1, #EC4899);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+}
+
+.section-description {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #C7AAFF;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.section-content {
+  margin: 2rem 0;
+  width: 100%;
+}
+
+.feature-item {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /* height: 100vh; */
+}
+
+.feature-item-title {
+  font-size: 30px;
+}
+
+.feature-item-description {
+  color: #C7AAFF;
+  max-width: 500px;
 }
 
 .mockup-description {
@@ -459,8 +494,8 @@
 }
 
 .phone-mockup-device {
-  width: 300px;
-  height: 600px;
+  width: 250px;
+  height: 550px;
   background: linear-gradient(145deg, #1a1a1a, #2d2d2d);
   border-radius: 10px;
   padding: 10px;
@@ -483,7 +518,7 @@
 }
 
 .cta-content {
-  max-width: 600px;
+  /* max-width: 600px; */
   margin: 0 auto;
 }
 
@@ -565,6 +600,36 @@
 
 /* Responsive */
 @media (max-width: 768px) {
+
+  .feature-item {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .section-description {
+    font-size: 1.1rem;
+  }
+
+  .feature-item-title {
+    font-size: 1.5rem;
+  }
+
+  .feature-item-description {
+    font-size: 1rem;
+  }
+
+  .feature-item-reverse {
+    flex-direction: column-reverse;
+  }
+
+  .feature-item .phone-container {
+    margin: 1rem 0;
+  }
+
   .container {
     padding: 0 1rem;
   }

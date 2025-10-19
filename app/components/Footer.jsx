@@ -8,6 +8,7 @@ export default function Footer() {
         <p>&copy; 2025 ANANTOR. All rights reserved. Made with ✨ for the cosmos.</p>
         <div className={styles.links}>
           <Link href="/privacy" className={styles.link}>Privacy Policy</Link>
+          <Link href="/terms" className={styles.link}>Terms & Conditions</Link>
         </div>
       </div>
     </footer>

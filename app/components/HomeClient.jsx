@@ -15,6 +15,8 @@ export default function HomeClient() {
   const [error, setError] = useState('')
   const [success, setSuccess] = useState('')
   const [isSubmitting, setIsSubmitting] = useState(false)
+  const [showStickyCTA, setShowStickyCTA] = useState(false)
+  const [isCtaDismissed, setIsCtaDismissed] = useState(false)
 
   useEffect(() => {
     const generateStars = () => {
@@ -39,19 +41,33 @@ export default function HomeClient() {
     const handleScroll = () => {
       const scrollTop = window.scrollY
       setIsScrolled(scrollTop > 100)
+      if (!isCtaDismissed) {
+        setShowStickyCTA(scrollTop > 400)
+      }
     }
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+  }, [isCtaDismissed])
 
   const copyToClipboard = (hex) => {
     navigator.clipboard.writeText(hex)
+  }
+
+  const handleDismissCTA = () => {
+    setIsCtaDismissed(true)
+    setShowStickyCTA(false)
+  }
+
+  const scrollToFeatures = () => {
+    const el = document.getElementById('features')
+    if (el) el.scrollIntoView({ behavior: 'smooth' })
   }
 
   return (
     <div className={styles.app}>
       <Header showTopHeader />
 
+      {/* Background: stars and glows */}
       <div className={styles.starfield}>
         {stars.map((star) => (
           <div
@@ -69,79 +85,198 @@ export default function HomeClient() {
           />
         ))}
       </div>
+      <div className={styles.glowOrbs} aria-hidden="true">
+        <div className={`${styles.orb} ${styles.orbPurple}`}></div>
+        <div className={`${styles.orb} ${styles.orbPink}`}></div>
+        <div className={`${styles.orb} ${styles.orbBlue}`}></div>
+      </div>
+      <div className={styles.gradientOverlay} aria-hidden="true" />
 
+      {/* Hero */}
       <section className={styles.hero}>
         <div className={styles.container}>
-          <div className={styles['hero-content']}>
-            <h1 className={styles['hero-title']}>
-              <span className={styles['gradient-text']}> Discover the Cosmos Within</span>
-            </h1>
-            <p className={styles['hero-description']}>
-              Reveal the mysteries of your soul and the bonds you share. Connect, reflect, and journey through the stars together.
-            </p>
-            <div className={styles['hero-buttons']}>
-              <button className={`${styles['cta-button']} ${styles.primary}`} onClick={() => setShowModal(true)}>
-                <span>Begin Your Divine Journey</span>
-                <div className={styles['button-glow']}></div>
-              </button>
+          <div className={styles.heroGrid}>
+            <div className={styles.heroLeft}>
+              <div className={styles.badge}>AI-Powered Astrology</div>
+              <h1 className={styles['hero-title']}>
+                <span className={styles['gradient-text']}>Discover Your Cosmic Path with AI Astrology</span>
+              </h1>
+              <p className={styles['hero-description']}>
+                Personalized Daily Horoscope, Compatibility & Future Predictions — powered by Ancient Vedic Wisdom and AI.
+              </p>
+
+              <div className={styles.trustRow}>
+                <div className={styles.trustItem}>
+                  <div className={styles.trustIcon}>✨</div>
+                  <div>
+                    <div className={styles.trustMetric}>10,000+</div>
+                    <div className={styles.trustLabel}>Active Users</div>
+                  </div>
+                </div>
+                <div className={styles.trustItem}>
+                  <div className={styles.trustIcon}>⭐</div>
+                  <div>
+                    <div className={styles.trustMetric}>4.8/5</div>
+                    <div className={styles.trustLabel}>User Rating</div>
+                  </div>
+                </div>
+                <div className={styles.trustItem}>
+                  <div className={styles.trustIcon}>✔</div>
+                  <div>
+                    <div className={styles.trustMetric}>Free</div>
+                    <div className={styles.trustLabel}>To Download</div>
+                  </div>
+                </div>
+              </div>
+
+              <div className={styles.storeButtons}>
+                <button className={styles.storeBtn} onClick={() => setShowModal(true)}>
+                  Get it on Google Play
+                </button>
+                <button className={styles.storeBtn} onClick={() => setShowModal(true)}>
+                  Download on App Store
+                </button>
+              </div>
+
+              {/* <button onClick={scrollToFeatures} className={styles.scrollLink}>
+                Explore Features ↓
+              </button> */}
+            </div>
+            <div className={styles.heroRight}>
+              <div className={styles.mockPhoneWrap}>
+                {/* <div className={styles['phone-mockup-device']}> */}
+                  <img src="https://images.unsplash.com/photo-1663153206186-1ccea6b8e9e9?auto=format&fit=crop&w=900&q=80" alt="Anantor App Mockups" className={styles['phone-mockup-image']} />
+                {/* </div> */}
+                <div className={styles.phoneGlow} aria-hidden="true"></div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section style={{ paddingBottom: '6rem' }}>
+      {/* Quick Features */}
+      <section id="features" className={styles.featuresSection}>
         <div className={styles.container}>
-          <h2 className={styles['section-title']}>Explore Your Cosmic Journey</h2>
-          <p className={styles['section-description']}>Anantor brings you powerful ways to connect with planetary energies and understand your place in the cosmos.</p>
-          <div className={styles['section-content']}>
-            <div className={styles['feature-item']}>
-              <div className={styles['feature-item-text']}>
-                <h3 className={styles['feature-item-title']}>Your Daily Cosmic Insights</h3>
-                <p className={styles['feature-item-description']}>Unlock a deeper understanding of yourself with a daily horoscope built from your unique cosmic blueprint. Go beyond general forecasts to explore your inherent strengths, navigate challenges, and align with your true potential.</p>
-                <Link href="/features#feature-horoscope" className={styles['download-button']} style={{ display: 'inline-block', marginTop: 12, textDecoration: 'none', padding: '12px 30px', fontSize: '15px' }}>
-                  Explore
-                </Link>
-              </div>
-              <div className={styles['phone-container']}>
-                <div className={styles['phone-mockup-device']}>
-                  <img src="https://assets.anantor.com/Screenshot_1759431922.png" alt="Daily Horoscope Screen" className={styles['phone-mockup-image']} />
-                </div>
-              </div>
+          <div className={styles.featuresHead}>
+            <h2 className={styles['section-title']}>Your Personalized Astrology Companion</h2>
+            <p className={styles['section-description']}>Experience the power of AI-driven cosmic insights tailored just for you</p>
+          </div>
+          <div className={styles.featuresGrid}>
+            <div className={styles.featureCard}>
+              <div className={styles.featureIcon}>✨</div>
+              <h3 className={styles.featureTitle}>Daily AI Horoscope</h3>
+              <p className={styles.featureText}>Get hyper-personalized insights based on your complete birth chart, not just your sun sign.</p>
+              <ul className={styles.featureListBullets}>
+                <li>Detailed daily predictions</li>
+                <li>Career & love guidance</li>
+                <li>Planetary transit alerts</li>
+              </ul>
             </div>
-
-            <div className={[styles['feature-item'], styles['feature-item-reverse']].join(' ')} style={{ minHeight: '100vh' }}>
-              <div className={styles['phone-container']}>
-                <div className={styles['phone-mockup-device']}>
-                  <img src="https://assets.anantor.com/Screenshot_1759589285.png" alt="Ask the Universe Anything Screen" className={styles['phone-mockup-image']} />
-                </div>
-              </div>
-              <div className={styles['feature-item-text']}>
-                <h3 className={styles['feature-item-title']}>Ask the Universe Anything</h3>
-                <p className={styles['feature-item-description']}>Have questions about your career, relationships, health, or personal growth? Anantor lets you ask anything and get an astrological perspective. Our system delivers clear, insightful answers, helping you navigate life's challenges with cosmic wisdom.</p>
-                <Link href="/features#feature-ask" className={styles['download-button']} style={{ display: 'inline-block', marginTop: 12, textDecoration: 'none', padding: '12px 30px', fontSize: '15px' }}>
-                  Explore
-                </Link>
-              </div>
+            <div className={styles.featureCard}>
+              <div className={styles.featureIcon}>💬</div>
+              <h3 className={styles.featureTitle}>24/7 AI Astrologer</h3>
+              <p className={styles.featureText}>Chat instantly with an AI astrologer trained on ancient Vedic wisdom and modern psychology.</p>
+              <ul className={styles.featureListBullets}>
+                <li>Unlimited questions</li>
+                <li>Instant detailed answers</li>
+                <li>Private & confidential</li>
+              </ul>
             </div>
-
-            <div className={styles['feature-item']}>
-              <div className={styles['feature-item-text']}>
-                <h3 className={styles['feature-item-title']}>Discover Cosmic Connections</h3>
-                <p className={styles['feature-item-description']}>Explore the celestial bonds between you and your friends. By analyzing your combined birth charts, Anantor reveals how your energies align, what makes your connection strong, and where there's room to grow together.</p>
-                <Link href="/features#feature-compatibility" className={styles['download-button']} style={{ display: 'inline-block', marginTop: 12, textDecoration: 'none', padding: '12px 30px', fontSize: '15px' }}>
-                  Explore
-                </Link>
-              </div>
-              <div className={styles['phone-container']}>
-                <div className={styles['phone-mockup-device']}>
-                  <img src="https://assets.anantor.com/Screenshot_1758845474.png" alt="Discover Cosmic Connections Screen" className={styles['phone-mockup-image']} />
-                </div>
-              </div>
+            <div className={styles.featureCard}>
+              <div className={styles.featureIcon}>💖</div>
+              <h3 className={styles.featureTitle}>Love Compatibility</h3>
+              <p className={styles.featureText}>Understand relationship dynamics through comprehensive birth chart analysis and synastry.</p>
+              <ul className={styles.featureListBullets}>
+                <li>Romantic compatibility</li>
+                <li>Friendship analysis</li>
+                <li>Family dynamics</li>
+              </ul>
             </div>
           </div>
         </div>
       </section>
 
+      {/* Deep Dive Rows */}
+      <section className={styles.deepDiveSection}>
+        <div className={styles.container}>
+          <div className={styles.deepDiveRow}>
+            <div className={styles.deepDiveText}>
+              <div className={styles.badge}>Feature 01</div>
+              <h2 className={styles.deepDiveTitle}>Your Daily Cosmic Insights</h2>
+              <p className={styles.deepDiveDesc}>Start each day with personalized guidance based on your complete birth chart. Our AI analyzes planetary positions to give you actionable insights for love, career, and personal growth.</p>
+              <ul className={styles.deepDiveBullets}>
+                <li>
+                  <strong>Personalized to your birth chart</strong>
+                  <span> Not generic zodiac predictions</span>
+                </li>
+                <li>
+                  <strong>Updated daily at sunrise</strong>
+                  <span> Fresh insights every morning</span>
+                </li>
+                <li>
+                  <strong>Lucky numbers & colors</strong>
+                  <span> Enhance your daily fortune</span>
+                </li>
+              </ul>
+            </div>
+            <div className={styles.deepDivePhone}>
+              <div className={styles['phone-mockup-device']}>
+                <img src="https://assets.anantor.com/Screenshot_1759431922.png" alt="Anantor App Mockups" className={styles['phone-mockup-image']} />
+              </div>
+              <div className={styles.phoneGlow} aria-hidden="true"></div>
+            </div>
+          </div>
+
+          <div className={`${styles.deepDiveRow} ${styles.deepDiveAlt}`}>
+            <div className={styles.deepDivePhone}>
+              <div className={styles['phone-mockup-device']}>
+                <img src="https://assets.anantor.com/Screenshot_1759589285.png" alt="Anantor App Mockups" className={styles['phone-mockup-image']} />
+              </div>
+              <div className={styles.phoneGlow} aria-hidden="true"></div>
+            </div>
+            <div className={styles.deepDiveText}>
+              <div className={`${styles.badge} ${styles.badgePink}`}>Feature 02</div>
+              <h2 className={styles.deepDiveTitle}>Ask the Universe Anything</h2>
+              <p className={styles.deepDiveDesc}>No more waiting for astrologer appointments. Get instant answers from our AI trained on thousands of years of Vedic astrology knowledge, available 24/7.</p>
+              <ul className={styles.deepDiveBullets}>
+                <li><strong>Ask about love & relationships</strong> <span>Get clarity on your romantic path</span></li>
+                <li><strong>Career guidance & decisions</strong> <span>Navigate professional challenges</span></li>
+                <li><strong>Life purpose & spiritual growth</strong> <span>Discover your soul's mission</span></li>
+              </ul>
+            </div>
+          </div>
+          <div className={styles.deepDiveRow}>
+            <div className={styles.deepDiveText}>
+              <div className={styles.badge}>Feature 03</div>
+              <h2 className={styles.deepDiveTitle}>Discover Cosmic Connections</h2>
+              <p className={styles.deepDiveDesc}>Understanding compatibility goes beyond sun signs. Our AI analyzes complete birth charts to reveal the deeper cosmic bonds between you and your loved ones.</p>
+              <ul className={styles.deepDiveBullets}>
+                <li>
+                  <strong>Comprehensive synastry analysis</strong>
+                  <span> All planetary aspects considered</span>
+                </li>
+                <li>
+                  <strong>Strengths & challenges revealed</strong>
+                  <span> Know what to nurture and navigate</span>
+                </li>
+                <li>
+                  <strong>Actionable relationship advice</strong>
+                  <span> Improve your connections</span>
+                </li>
+              </ul>
+            </div>
+            <div className={styles.deepDivePhone}>
+              <div className={styles['phone-mockup-device']}>
+                <img src="https://assets.anantor.com/Screenshot_1758845474.png" alt="Anantor App Mockups" className={styles['phone-mockup-image']} />
+              </div>
+              <div className={styles.phoneGlow} aria-hidden="true"></div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      {/* Planets (kept, with improved heading already present) */}
       <section className={styles['planets-song-section']}>
         <div className={styles.container}>
           <div className={styles['planets-song-content']}>
@@ -195,6 +330,58 @@ export default function HomeClient() {
         </div>
       </section>
 
+      {/* Testimonials */}
+      <section className={styles.testimonialsSection}>
+        <div className={styles.container}>
+          <div className={styles.featuresHead}>
+            <h2 className={styles['section-title']}>Loved by Cosmic Seekers Worldwide</h2>
+            <p className={styles['section-description']}>Join thousands who discovered their path through Anantor</p>
+          </div>
+          <div className={styles.testimonialsGrid}>
+            <div className={styles.testimonialCard}>
+              <div className={styles.starsRow}>★★★★★</div>
+              <p className={styles.testimonialText}>
+                "Finally, an astrology app that feels real and accurate. The AI astrologer answered questions I've had for years!"
+              </p>
+              <div className={styles.testimonialAuthor}>
+                <div className={styles.authorAvatar}>PS</div>
+                <div>
+                  <div className={styles.authorName}>Priya S.</div>
+                  <div className={styles.authorMeta}>Mumbai, India</div>
+                </div>
+              </div>
+            </div>
+            <div className={styles.testimonialCard}>
+              <div className={styles.starsRow}>★★★★★</div>
+              <p className={styles.testimonialText}>
+                "The compatibility feature helped me understand my partner so much better. Our relationship improved dramatically!"
+              </p>
+              <div className={styles.testimonialAuthor}>
+                <div className={styles.authorAvatar}>RK</div>
+                <div>
+                  <div className={styles.authorName}>Raj K.</div>
+                  <div className={styles.authorMeta}>Delhi, India</div>
+                </div>
+              </div>
+            </div>
+            <div className={styles.testimonialCard}>
+              <div className={styles.starsRow}>★★★★★</div>
+              <p className={styles.testimonialText}>
+                "I check my daily horoscope every morning. It's scary how accurate it is. Changed my life!"
+              </p>
+              <div className={styles.testimonialAuthor}>
+                <div className={styles.authorAvatar}>AM</div>
+                <div>
+                  <div className={styles.authorName}>Ananya M.</div>
+                  <div className={styles.authorMeta}>Bangalore, India</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Final CTA */}
       <section className={styles['cta-section']}>
         <div className={styles.container}>
           <div className={styles['cta-content']}>
@@ -209,6 +396,26 @@ export default function HomeClient() {
       </section>
 
       <Footer />
+
+      {/* Sticky Mobile CTA */}
+      {showStickyCTA && (
+        <div className={styles.stickyCta}>
+          <button className={styles.stickyDismiss} aria-label="Dismiss" onClick={handleDismissCTA}>×</button>
+          <div className={styles.stickyInner}>
+            <div className={styles.stickyLeft}>
+              <img src="/text-logo.png" alt="Anantor" className={styles.stickyLogo} />
+              <div>
+                <div className={styles.stickyTitle}>Download Anantor App</div>
+                <div className={styles.stickySubtitle}>Free AI Astrology & Horoscope</div>
+              </div>
+            </div>
+            <div className={styles.stickyButtons}>
+              <button className={styles.stickyBtn} onClick={() => setShowModal(true)}>Play</button>
+              <button className={styles.stickyBtn} onClick={() => setShowModal(true)}>iOS</button>
+            </div>
+          </div>
+        </div>
+      )}
 
       <Modal
         open={showModal}

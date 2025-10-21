@@ -201,7 +201,7 @@ export default function HomeClient() {
         <div className={styles.container}>
           <div className={styles.deepDiveRow}>
             <div className={styles.deepDiveText}>
-              <div className={styles.badge}>Feature 01</div>
+              {/* <div className={styles.badge}>Feature 01</div> */}
               <h2 className={styles.deepDiveTitle}>Your Daily Cosmic Insights</h2>
               <p className={styles.deepDiveDesc}>Start each day with personalized guidance based on your complete birth chart. Our AI analyzes planetary positions to give you actionable insights for love, career, and personal growth.</p>
               <ul className={styles.deepDiveBullets}>
@@ -235,7 +235,7 @@ export default function HomeClient() {
               <div className={styles.phoneGlow} aria-hidden="true"></div>
             </div>
             <div className={styles.deepDiveText}>
-              <div className={`${styles.badge} ${styles.badgePink}`}>Feature 02</div>
+              {/* <div className={`${styles.badge} ${styles.badgePink}`}>Feature 02</div> */}
               <h2 className={styles.deepDiveTitle}>Ask the Universe Anything</h2>
               <p className={styles.deepDiveDesc}>No more waiting for astrologer appointments. Get instant answers from our AI trained on thousands of years of Vedic astrology knowledge, available 24/7.</p>
               <ul className={styles.deepDiveBullets}>
@@ -247,7 +247,7 @@ export default function HomeClient() {
           </div>
           <div className={styles.deepDiveRow}>
             <div className={styles.deepDiveText}>
-              <div className={styles.badge}>Feature 03</div>
+              {/* <div className={styles.badge}>Feature 03</div> */}
               <h2 className={styles.deepDiveTitle}>Discover Cosmic Connections</h2>
               <p className={styles.deepDiveDesc}>Understanding compatibility goes beyond sun signs. Our AI analyzes complete birth charts to reveal the deeper cosmic bonds between you and your loved ones.</p>
               <ul className={styles.deepDiveBullets}>

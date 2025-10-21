@@ -90,7 +90,7 @@ export default function HomeClient() {
         <div className={`${styles.orb} ${styles.orbPink}`}></div>
         <div className={`${styles.orb} ${styles.orbBlue}`}></div>
       </div>
-      <div className={styles.gradientOverlay} aria-hidden="true" />
+      {/* <div className={styles.gradientOverlay} aria-hidden="true" /> */}
 
       {/* Hero */}
       <section className={styles.hero}>
@@ -335,8 +335,10 @@ export default function HomeClient() {
             <h2 className={styles['section-title']}>
               The Song of the <span className={styles['gradient-text']}>Planets</span>
             </h2>
-            <p className={styles['section-description']}>Every Soul is a Constellation</p>
-
+            <p className={styles['section-description']} style={{ fontSize: "1.125rem", color: "#99a1af" }}>Every Soul is a Constellation</p>
+            <p className={styles['planets-conclusion']} style={{ fontSize: "1rem", color: "#6a7282" }}>
+            Anantor analyzes how these celestial forces interact in your unique birth chart to reveal your life's story
+            </p>
             <div className={styles['planets-grid']}>
               <div className={styles['planet-card']}>
                 <div className={styles['planet-icon']}>☉</div>
@@ -374,10 +376,6 @@ export default function HomeClient() {
                 <p className={styles['planet-description']}>Horizons ever expanding, the spirit's journey.</p>
               </div>
             </div>
-
-            <p className={styles['planets-conclusion']}>
-              These celestial companions compose the background music of every friendship and life story.
-            </p>
           </div>
         </div>
       </section>
@@ -387,12 +385,16 @@ export default function HomeClient() {
       <section className={styles['cta-section']}>
         <div className={styles.container}>
           <div className={styles['cta-content']}>
-            <h3 className={styles['cta-title']}>Ready to Explore Your Destiny?</h3>
-            <p className={styles['cta-description']}>Step Into Your Constellation</p>
-            <button className={styles['download-button']} onClick={() => setShowModal(true)}>
-              <span className="button-text">Begin My Story</span>
-              <div className={styles['button-particles']}></div>
-            </button>
+            <h3 className={styles['cta-title']}>Ready to Unlock Your Cosmic Blueprint?</h3>
+            <p className={styles['cta-description']}>Download Anantor now and get your first personalized reading free. Your destiny awaits.</p>
+            <div className={styles.storeButtons} style={{ justifyContent: "center" }}>
+                <button className={styles.storeBtn} onClick={() => setShowModal(true)}>
+                  Get it on Google Play
+                </button>
+                <button className={styles.storeBtn} onClick={() => setShowModal(true)}>
+                  Download on App Store
+                </button>
+              </div>
           </div>
         </div>
       </section>

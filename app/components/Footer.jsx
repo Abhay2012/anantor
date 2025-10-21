@@ -5,10 +5,14 @@ export default function Footer() {
   return (
     <footer className={styles.footer}>
       <div className={styles.container}>
-        <p>&copy; 2025 ANANTOR. All rights reserved. Made with ✨ for the cosmos.</p>
+      <div>
+        <img style={{ height: '20px' }} src="/text-logo.png" alt="Anantor" />
+      </div>
+        <p>Made with ✨ for the cosmos | &copy; 2025 Anantor</p>
         <div className={styles.links}>
-          <Link href="/privacy" className={styles.link}>Privacy Policy</Link>
-          <Link href="/terms" className={styles.link}>Terms & Conditions</Link>
+          <Link href="/privacy" className={styles.link}>Privacy</Link>
+          <Link href="/terms" className={styles.link}>Terms</Link>
+          <Link href="/contact-us" className={styles.link}>Support</Link>
         </div>
       </div>
     </footer>

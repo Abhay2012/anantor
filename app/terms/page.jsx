@@ -120,18 +120,18 @@ export default function TermsPage() {
             <p className={styles.p}>We may suspend or terminate your access to the Service at any time, with or without notice, if we believe you have violated these Terms or to protect the Service or other users.</p>
           </section>
 
-          <section>
+          {/* <section>
             <h2 className={styles.sectionTitle}>13. Governing Law</h2>
             <p className={styles.p}>These Terms are governed by the laws of your country of residence, without regard to conflict of law principles. If you operate in a specific jurisdiction, specify the governing law and venue here.</p>
-          </section>
+          </section> */}
 
           <section>
-            <h2 className={styles.sectionTitle}>14. Changes to These Terms</h2>
+            <h2 className={styles.sectionTitle}>13. Changes to These Terms</h2>
             <p className={styles.p}>We may update these Terms from time to time. We will notify you of material changes in-app or on our website. Continued use of the Service after changes become effective constitutes acceptance of the updated Terms.</p>
           </section>
 
           <section>
-            <h2 className={styles.sectionTitle}>15. Contact Us</h2>
+            <h2 className={styles.sectionTitle}>14. Contact Us</h2>
             <p className={styles.p}>If you have questions about these Terms, please contact us at:</p>
             <p className={styles.p}><em>contact@anantor.com</em></p>
           </section>

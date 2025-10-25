@@ -4,3 +4,7 @@
 .sectionTitle { font-size: 1.25rem; margin-bottom: .5rem; color: #C7AAFF; }
 .p { margin-bottom: .5rem; }
 .list { margin-left: 1rem; list-style: disc; display: grid; gap: .5rem; }
+
+@media (max-width: 768px) {
+    .app {padding-top: 2rem; }
+}

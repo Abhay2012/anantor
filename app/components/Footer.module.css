@@ -15,3 +15,7 @@
 }
  .link { color: #C7AAFF; text-decoration: underline; margin-left: 0.75rem; }
  .links { margin-top: 0.5rem; }
+
+ @media (max-width: 768px) {
+  .container { flex-direction: column; }
+}

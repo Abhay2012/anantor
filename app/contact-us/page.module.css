@@ -31,3 +31,7 @@
     display: grid;
     gap: .5rem;
 }
+
+@media (max-width: 768px) {
+    .app {padding-top: 2rem; }
+}

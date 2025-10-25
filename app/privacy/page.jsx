@@ -405,7 +405,9 @@ export default function PrivacyPage() {
               <li>Compliant with Information Technology Act, 2000</li>
               <li>Subject to oversight by Data Protection Board of India</li>
             </ul>
+            <br/>
             <p className={styles.p}>By using Anantor, you acknowledge that you have read, understood, and agree to this Privacy Policy and our compliance with the Digital Personal Data Protection Act, 2023.</p>
+            <br/>
             <p className={styles.p}><strong>Notice to Users in India:</strong> This App complies with the Digital Personal Data Protection Act, 2023. Your personal data will be processed in accordance with Indian data protection laws. You have specific rights under the DPDPA, including the right to access, correct, and delete your data, and to file complaints with the Data Protection Board of India. For more information about your rights or to exercise them, please contact us at <em>contact@anantor.com</em>.</p>
           </section>
         </div>

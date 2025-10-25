@@ -104,7 +104,7 @@ export default function PrivacyPage() {
             <p className={styles.p}>You may access, correct, or delete your personal information by contacting us. Manage app permissions (Contacts, Notifications) from your device settings. To request account or data deletion, email us from your registered email/phone.</p>
             <p className={styles.p}>
               To request account or data deletion, please visit our{' '}
-              <Link href="/delete-account">Delete Account</Link>{' '}page for instructions.
+              <Link style={{ color: '#C7AAFF' }} href="/delete-account">Delete Account</Link>{' '}page for instructions.
             </p>
           </section>
 

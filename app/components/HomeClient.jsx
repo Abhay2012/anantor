@@ -105,30 +105,6 @@ export default function HomeClient() {
                 Personalized Daily Horoscope, Compatibility & Future Predictions — powered by Ancient Vedic Wisdom and AI.
               </p>
 
-              <div className={styles.trustRow}>
-                <div className={styles.trustItem}>
-                  <div className={styles.trustIcon}>✨</div>
-                  <div>
-                    <div className={styles.trustMetric}>10,000+</div>
-                    <div className={styles.trustLabel}>Active Users</div>
-                  </div>
-                </div>
-                <div className={styles.trustItem}>
-                  <div className={styles.trustIcon}>⭐</div>
-                  <div>
-                    <div className={styles.trustMetric}>4.8/5</div>
-                    <div className={styles.trustLabel}>User Rating</div>
-                  </div>
-                </div>
-                <div className={styles.trustItem}>
-                  <div className={styles.trustIcon}>✔</div>
-                  <div>
-                    <div className={styles.trustMetric}>Free</div>
-                    <div className={styles.trustLabel}>To Download</div>
-                  </div>
-                </div>
-              </div>
-
               <div className={styles.storeButtons}>
                 <button className={styles.storeBtn} onClick={() => setShowModal(true)}>
                   Get it on Google Play
@@ -275,58 +251,6 @@ export default function HomeClient() {
 
         </div>
       </section>
-
-      {/* Testimonials */}
-      <section className={styles.testimonialsSection}>
-        <div className={styles.container}>
-          <div className={styles.featuresHead}>
-            <h2 className={styles['section-title']}>Loved by Cosmic Seekers Worldwide</h2>
-            <p className={styles['section-description']}>Join thousands who discovered their path through Anantor</p>
-          </div>
-          <div className={styles.testimonialsGrid}>
-            <div className={styles.testimonialCard}>
-              <div className={styles.starsRow}>★★★★★</div>
-              <p className={styles.testimonialText}>
-                "Finally, an astrology app that feels real and accurate. The AI astrologer answered questions I've had for years!"
-              </p>
-              <div className={styles.testimonialAuthor}>
-                <div className={styles.authorAvatar}>PS</div>
-                <div>
-                  <div className={styles.authorName}>Priya S.</div>
-                  <div className={styles.authorMeta}>Mumbai, India</div>
-                </div>
-              </div>
-            </div>
-            <div className={styles.testimonialCard}>
-              <div className={styles.starsRow}>★★★★★</div>
-              <p className={styles.testimonialText}>
-                "The compatibility feature helped me understand my partner so much better. Our relationship improved dramatically!"
-              </p>
-              <div className={styles.testimonialAuthor}>
-                <div className={styles.authorAvatar}>RK</div>
-                <div>
-                  <div className={styles.authorName}>Raj K.</div>
-                  <div className={styles.authorMeta}>Delhi, India</div>
-                </div>
-              </div>
-            </div>
-            <div className={styles.testimonialCard}>
-              <div className={styles.starsRow}>★★★★★</div>
-              <p className={styles.testimonialText}>
-                "I check my daily horoscope every morning. It's scary how accurate it is. Changed my life!"
-              </p>
-              <div className={styles.testimonialAuthor}>
-                <div className={styles.authorAvatar}>AM</div>
-                <div>
-                  <div className={styles.authorName}>Ananya M.</div>
-                  <div className={styles.authorMeta}>Bangalore, India</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
 
       {/* Planets (kept, with improved heading already present) */}
       <section className={styles['planets-song-section']}>

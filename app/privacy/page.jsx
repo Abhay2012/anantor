@@ -255,7 +255,7 @@ export default function PrivacyPage() {
               <li>Email us from your registered email address or phone number at <em>contact@anantor.com</em></li>
               <li>We will verify your identity before processing the deletion request</li>
             </ul>
-            <h3 className={styles.sectionTitle} style={{ fontSize: '1.1rem' }}>8.5 Right to Withdraw Consent</h3>
+            <h3 className={styles.sectionTitle} style={{ fontSize: '1.1rem' }}>7.4 Right to Withdraw Consent</h3>
             <ul className={styles.list}>
               <li>You can withdraw your consent for data processing at any time</li>
               <li>Withdrawal of consent will not affect the lawfulness of processing before withdrawal</li>
@@ -263,9 +263,9 @@ export default function PrivacyPage() {
               <li>To withdraw consent for notifications, disable them via device settings</li>
             </ul>
             <p className={styles.p}><strong>Consequences of Withdrawal:</strong> If you withdraw consent for essential data processing (such as birth information required for astrology services), we may not be able to provide you with the App's core features.</p>
-            <h3 className={styles.sectionTitle} style={{ fontSize: '1.1rem' }}>8.6 Right to Grievance Redressal</h3>
+            <h3 className={styles.sectionTitle} style={{ fontSize: '1.1rem' }}>7.5 Right to Grievance Redressal</h3>
             <p className={styles.p}>You have the right to file a complaint regarding the processing of your personal data by contacting us at <em>contact@anantor.coma</em></p>
-            <h3 className={styles.sectionTitle} style={{ fontSize: '1.1rem' }}>8.7 Permission Management</h3>
+            <h3 className={styles.sectionTitle} style={{ fontSize: '1.1rem' }}>7.6 Permission Management</h3>
             <ul className={styles.list}>
               <li><strong>Contacts Permission:</strong> Manage through your device settings (Settings &gt; Apps &gt; Anantor &gt; Permissions)</li>
               <li><strong>Notifications Permission:</strong> Disable push notifications through your device settings</li>
@@ -274,7 +274,7 @@ export default function PrivacyPage() {
           </section>
 
           <section>
-            <h2 className={styles.sectionTitle}>9. Your Duties as a Data Principal</h2>
+            <h2 className={styles.sectionTitle}>8. Your Duties as a Data Principal</h2>
             <p className={styles.p}>Under the DPDPA, you also have certain responsibilities:</p>
             <ul className={styles.list}>
               <li><strong>Comply with Applicable Law:</strong> You must not impersonate another person or provide false information</li>
@@ -285,38 +285,38 @@ export default function PrivacyPage() {
           </section>
 
           <section>
-            <h2 className={styles.sectionTitle}>10. Third-Party Services and Links</h2>
-            <h3 className={styles.sectionTitle} style={{ fontSize: '1.1rem' }}>10.1 Third-Party Service Providers</h3>
+            <h2 className={styles.sectionTitle}>9. Third-Party Services and Links</h2>
+            <h3 className={styles.sectionTitle} style={{ fontSize: '1.1rem' }}>9.1 Third-Party Service Providers</h3>
             <p className={styles.p}>Anantor integrates with the following third-party services:</p>
             <ul className={styles.list}>
               <li>Firebase Cloud Messaging (Google LLC): For delivering push notifications</li>
               <li>Subject to Google's Privacy Policy</li>
             </ul>
             <p className={styles.p}>These third parties act as Data Processors and are bound by our data processing agreements.</p>
-            <h3 className={styles.sectionTitle} style={{ fontSize: '1.1rem' }}>10.2 Third-Party Links</h3>
+            <h3 className={styles.sectionTitle} style={{ fontSize: '1.1rem' }}>9.2 Third-Party Links</h3>
             <p className={styles.p}>The App may contain links to third-party websites or services that are not operated by us. We are not responsible for the privacy practices of these external sites. We recommend reviewing their privacy policies before providing any personal information.</p>
             <p className={styles.p}>We are not liable for the data practices of third-party services.</p>
           </section>
 
           <section>
-            <h2 className={styles.sectionTitle}>11. Children's Privacy and Parental Consent</h2>
-            <h3 className={styles.sectionTitle} style={{ fontSize: '1.1rem' }}>11.1 Age Restriction</h3>
+            <h2 className={styles.sectionTitle}>10. Children's Privacy and Parental Consent</h2>
+            <h3 className={styles.sectionTitle} style={{ fontSize: '1.1rem' }}>10.1 Age Restriction</h3>
             <p className={styles.p}>Anantor is intended for users who are 18 years of age or older. </p>
-            <h3 className={styles.sectionTitle} style={{ fontSize: '1.1rem' }}>11.2 Verifiable Parental Consent</h3>
+            <h3 className={styles.sectionTitle} style={{ fontSize: '1.1rem' }}>10.2 Verifiable Parental Consent</h3>
             <p className={styles.p}>If you are under 18 years of age, you may use this App only with the verifiable consent of your parent or legal guardian. </p>
-            <h3 className={styles.sectionTitle} style={{ fontSize: '1.1rem' }}>11.3 Prohibited Activities for Children</h3>
+            <h3 className={styles.sectionTitle} style={{ fontSize: '1.1rem' }}>10.3 Prohibited Activities for Children</h3>
             <ul className={styles.list}>
               <li>Tracking or behavioral monitoring of users under 18</li>
               <li>Targeted advertising directed at users under 18</li>
               <li>Any processing that may cause detrimental effects on the well-being of children</li>
             </ul>
-            <h3 className={styles.sectionTitle} style={{ fontSize: '1.1rem' }}>11.4 No Knowingly Collection from Minors Without Consent</h3>
+            <h3 className={styles.sectionTitle} style={{ fontSize: '1.1rem' }}>10.4 No Knowingly Collection from Minors Without Consent</h3>
             <p className={styles.p}>We do not knowingly collect personal information from anyone under 18 without verifiable parental consent. If we discover that we have inadvertently collected personal information from a child under 18 without proper parental consent, we will:</p>
             <ul className={styles.list}>
               <li>Take immediate steps to delete such information from our servers</li>
               <li>Notify the parent/guardian if possible</li>
             </ul>
-            <h3 className={styles.sectionTitle} style={{ fontSize: '1.1rem' }}>11.5 Parental Rights</h3>
+            <h3 className={styles.sectionTitle} style={{ fontSize: '1.1rem' }}>10.5 Parental Rights</h3>
             <p className={styles.p}>If you are a parent or guardian and believe your child has provided us with personal information without your consent, please contact us immediately at <em>contact@anantor.com</em>. You have the right to:</p>
             <ul className={styles.list}>
               <li>Access your child's personal data</li>
@@ -326,26 +326,26 @@ export default function PrivacyPage() {
           </section>
 
           <section>
-            <h2 className={styles.sectionTitle}>14. Changes to This Privacy Policy</h2>
+            <h2 className={styles.sectionTitle}>11. Changes to This Privacy Policy</h2>
             <p className={styles.p}>We may update this Privacy Policy from time to time to reflect changes in our practices, technologies, legal requirements, or for operational reasons. When we make changes:</p>
             <ul className={styles.list}>
               <li>We will update the "Last Updated" date at the top of this policy</li>
               <li>For material changes affecting your rights, we will notify you through In-app notifications and SMS to your registered phone number and Prominent notice on our website</li>
               <li>We will provide the updated policy in a clear and accessible manner</li>
             </ul>
-            <h3 className={styles.sectionTitle} style={{ fontSize: '1.1rem' }}>14.2 Your Acceptance</h3>
+            <h3 className={styles.sectionTitle} style={{ fontSize: '1.1rem' }}>Your Acceptance</h3>
             <p className={styles.p}>Your continued use of Anantor after the effective date of the updated Privacy Policy constitutes your acceptance of the changes. If you do not agree with the changes, you may stop using the App and request deletion of your account.</p>
             <p className={styles.p}>We encourage you to review this Privacy Policy periodically to stay informed about how we protect your information.</p>
           </section>
 
           <section>
-            <h2 className={styles.sectionTitle}>15. Contact Us and Data Protection Officer</h2>
-            <h3 className={styles.sectionTitle} style={{ fontSize: '1.1rem' }}>15.1 General Inquiries</h3>
+            <h2 className={styles.sectionTitle}>12. Contact Us and Data Protection Officer</h2>
+            <h3 className={styles.sectionTitle} style={{ fontSize: '1.1rem' }}>12.1 General Inquiries</h3>
             <p className={styles.p}>If you have any questions, concerns, or requests regarding this Privacy Policy or our data practices, please contact us at: <em>contact@anantor.com</em></p>
           </section>
 
           <section>
-            <h2 className={styles.sectionTitle}>16. Governing Law and Jurisdiction</h2>
+            <h2 className={styles.sectionTitle}>13. Governing Law and Jurisdiction</h2>
             <p className={styles.p}>This Privacy Policy is governed by the laws of India, including but not limited to:</p>
             <ul className={styles.list}>
               <li>The Digital Personal Data Protection Act, 2023</li>
@@ -357,7 +357,7 @@ export default function PrivacyPage() {
           </section>
 
           <section>
-            <h2 className={styles.sectionTitle}>17. Data Safety Summary for Google Play</h2>
+            <h2 className={styles.sectionTitle}>14. Data Safety Summary for Google Play</h2>
             <p className={styles.p}>For transparency and in accordance with Google Play's Data Safety requirements, here is a summary of our data practices:</p>
             <h3 className={styles.sectionTitle} style={{ fontSize: '1.1rem' }}>Data Collected:</h3>
             <ul className={styles.list}>

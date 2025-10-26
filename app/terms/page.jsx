@@ -316,7 +316,7 @@ export default function TermsPage() {
             <h2 className={styles.sectionTitle}>8. Privacy and Data Protection (DPDPA Compliance)</h2>
             <h3 className={styles.p} style={{ fontWeight: 600, marginBottom: '0.5rem' }}>8.1 Privacy Policy</h3>
             <p className={styles.p}>Your privacy is important to us. Our Privacy Policy explains:</p>
-            <ul>
+            <ul className={styles.list}>
               <li>What personal information we collect</li>
               <li>How we use and process your information</li>
               <li>How we protect your information</li>
@@ -432,9 +432,9 @@ export default function TermsPage() {
               </li>
             </ol>
             <p><b>EVEN IF WE HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.</b></p>
-            <h3 className={styles.p} style={{ fontWeight: 600, marginBottom: '0.5rem' }}>9.7 Basis of the Bargain</h3>
-            <p className={styles.p}>You acknowledge that the disclaimers and limitations of liability in this Section 10 are fundamental elements of the agreement between you and Anantor. The Service would not be provided to you without these limitations.</p>
-            <h3 className={styles.p} style={{ fontWeight: 600, marginBottom: '0.5rem' }}>9.8 Jurisdiction-Specific Rights</h3>
+            <h3 className={styles.p} style={{ fontWeight: 600, marginBottom: '0.5rem' }}>9.6 Basis of the Bargain</h3>
+            <p className={styles.p}>You acknowledge that the disclaimers and limitations of liability in this Section 9 are fundamental elements of the agreement between you and Anantor. The Service would not be provided to you without these limitations.</p>
+            <h3 className={styles.p} style={{ fontWeight: 600, marginBottom: '0.5rem' }}>9.7 Jurisdiction-Specific Rights</h3>
             <p className={styles.p}>Some jurisdictions do not allow the exclusion or limitation of certain warranties or liabilities. In such jurisdictions, our liability will be limited to the maximum extent permitted by law.</p>
           </section>
 
@@ -478,7 +478,7 @@ export default function TermsPage() {
             </ol>
             <h3 className={styles.p} style={{ fontWeight: 600, marginBottom: '0.5rem' }}>10.2 Cooperation in Defense</h3>
             <p>You agree to: </p>
-            <ul>
+            <ul className={styles.list}>
               <li>Cooperate fully with us in the defense of any claim</li>
               <li>Provide us with all necessary assistance, information, and authority to defend</li>
               <li>Not settle any claim without our prior written consent</li>
@@ -498,7 +498,7 @@ export default function TermsPage() {
               <li>Ceasing all access and use of the Service</li>
             </ul>
             <p className={styles.p}>Upon termination by you: 
-              <ul>
+              <ul className={styles.list}>
                 <li>Your account and personal data will be deleted in accordance with our Privacy Policy and the DPDPA</li>
                 <li>You will lose access to all content, data, and features associated with your account</li>
               </ul>
@@ -515,7 +515,7 @@ export default function TermsPage() {
             </ul>
             <h3 className={styles.p} style={{ fontWeight: 600, marginBottom: '0.5rem' }}>11.4 Effect of Termination</h3>
             <p className={styles.p}>Upon termination of these Terms (by either party): </p>
-              <ul>
+              <ul className={styles.list}>
                 <li>Your right to access and use the Service immediately ceases</li>
                 <li>All licenses granted to you in these Terms will immediately terminate</li>
                 <li>We may delete your account, User Content, and all associated data</li>
@@ -528,14 +528,14 @@ export default function TermsPage() {
             <p className={styles.p}>We reserve the right to modify, amend, or update these Terms at any time, at our sole discretion. </p>
             <h3 className={styles.p} style={{ fontWeight: 600, marginBottom: '0.5rem' }}>12.2 Notice of Changes</h3>
             <p className={styles.p}>When we make changes to these Terms: </p>
-              <ul>
+              <ul className={styles.list}>
                 <li>We will update the "Last Updated" date at the top of these Terms</li>
                 <li>For material changes that significantly affect your rights or obligations, we will notify you through In-app notifications or prominent notice within the app</li>
               </ul>
             
             <h3 className={styles.p} style={{ fontWeight: 600, marginBottom: '0.5rem' }}>12.3 Your Acceptance of Changes</h3>
             <p className={styles.p}>Your continued use of the Service after the effective date of the updated Terms constitutes your acceptance of the changes. If you do not agree with the updated Terms: </p>
-              <ul>
+              <ul className={styles.list}>
                 <li>You must stop using the Service immediately</li>
                 <li>You may delete your account by contacting us at <em>contact@anantor.com</em></li>
               </ul>
@@ -547,7 +547,7 @@ export default function TermsPage() {
           <section>
             <h2 className={styles.sectionTitle}>13. Dispute Resolution and Governing Law</h2>
             <p className={styles.p}>These Terms, and any disputes arising from or related to these Terms or your use of the Service, shall be governed by and construed in accordance with the laws of India, without regard to conflict of law principles. This includes but is not limited to: </p>
-              <ul>
+              <ul className={styles.list}>
                 <li>The Digital Personal Data Protection Act, 2023</li>
                 <li>The Information Technology Act, 2000</li>
                 <li>The Indian Contract Act, 1872</li>
@@ -572,7 +572,7 @@ export default function TermsPage() {
             </ul>
             <h3 className={styles.p} style={{ fontWeight: 600, marginBottom: '0.5rem' }}>No Confidential Information</h3>
             <p className={styles.p}>Do not submit any Feedback that contains: </p>
-              <ul>
+              <ul className={styles.list}>
                 <li>Confidential or proprietary information</li>
                 <li>Personal information about yourself or others</li>
                 <li>Trade secrets or sensitive business information</li>
@@ -610,30 +610,36 @@ export default function TermsPage() {
             </ul>
             <p><b>Astrological content is speculative, interpretive, and for entertainment only.</b></p>
             <h3 className={styles.p} style={{ fontWeight: 600, marginBottom: '0.5rem' }}>16.4 Personal Responsibility for Decisions</h3>
-            <p className={styles.p}>You are solely responsible for all decisions you make, whether or not influenced by content from the Service. You should:
-            <br/>Use common sense and critical thinking
-            <br/>Consult qualified professionals (doctors, lawyers, financial advisors, therapists) for important decisions
-            <br/>Not make major life decisions (marriage, divorce, career changes, medical treatments, financial investments, legal matters) based solely on astrological content
-            <br/>Recognize that you have free will and agency over your life
+            <p className={styles.p}>You are solely responsible for all decisions you make, whether or not influenced by content from the Service. You should:</p>
+            <ul className={styles.list}>
+              <li>Use common sense and critical thinking</li>
+              <li>Consult qualified professionals (doctors, lawyers, financial advisors, therapists) for important decisions</li>
+              <li>Not make major life decisions (marriage, divorce, career changes, medical treatments, financial investments, legal matters) based solely on astrological content</li>
+              <li>Recognize that you have free will and agency over your life</li>
+            </ul>
             <br/><strong>DO NOT rely on astrological content for:</strong>
-            <br/>Medical diagnoses or treatment decisions
-            <br/>Legal advice or decisions
-            <br/>Financial investments or business decisions
-            <br/>Relationship decisions (marriage, divorce, dating)
-            <br/>Career or educational choices
-            <br/>Mental health or psychological issues
-            <br/>Safety or emergency situations
-            </p>
+            <ul className={styles.list}>
+              <li>Medical diagnoses or treatment decisions</li>
+              <li>Legal advice or decisions</li>
+              <li>Financial investments or business decisions</li>
+              <li>Relationship decisions (marriage, divorce, dating)</li>
+              <li>Career or educational choices</li>
+              <li>Mental health or psychological issues</li>
+              <li>Safety or emergency situations</li>
+            </ul>
           </section>
 
           <section>
             <h2 className={styles.sectionTitle}>17. Grievance Redressal Mechanism</h2>
             <p className={styles.p}>To file a grievance or complaint, send an email to <em>contact@anantor.com</em> with the subject line "Grievance - [Brief Description]" and Include the following information:
-            <br/>Your name and registered phone number
-            <br/>Description of the grievance or complaint
-            <br/>Specific content, feature, or user involved (if applicable)
-            <br/>Date and time of the incident
-            <br/>Desired resolution or remedy
+            <ul className={styles.list}>
+              <li>Your name and registered phone number</li>
+              <li>Description of the grievance or complaint</li>
+              <li>Specific content, feature, or user involved (if applicable)</li>
+              <li>Date and time of the incident</li>
+              <li>Desired resolution or remedy</li>
+              <li>Supporting documentation (screenshots, emails, etc.)</li>
+            </ul>
             <br/>Supporting documentation (screenshots, emails, etc.)
             </p>
           </section>

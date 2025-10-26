@@ -196,8 +196,8 @@ export default function PrivacyPage() {
           </section>
 
           <section>
-            <h2 className={styles.sectionTitle}>6. Data Storage and Retention</h2>
-            <h3 className={styles.sectionTitle} style={{ fontSize: '1.1rem' }}>6.1 Local Storage on Your Device</h3>
+            <h2 className={styles.sectionTitle}>5. Data Storage and Retention</h2>
+            <h3 className={styles.sectionTitle} style={{ fontSize: '1.1rem' }}>5.1 Local Storage on Your Device</h3>
             <p className={styles.p}>We store the following information locally on your device:</p>
             <ul className={styles.list}>
               <li><strong>Session Token:</strong> Keeps you logged into the App using Secure Storage</li>
@@ -205,7 +205,7 @@ export default function PrivacyPage() {
             </ul>
             <p className={styles.p}>This local data remains on your device until you log out or uninstall the App.</p>
 
-            <h3 className={styles.sectionTitle} style={{ fontSize: '1.1rem' }}>6.2 Server-Side Storage</h3>
+            <h3 className={styles.sectionTitle} style={{ fontSize: '1.1rem' }}>5.2 Server-Side Storage</h3>
             <p className={styles.p}>The following information is stored on our secure servers (api.anantor.com):</p>
             <ul className={styles.list}>
               <li>Account credentials and authentication data</li>
@@ -217,32 +217,32 @@ export default function PrivacyPage() {
               <li>Push notification tokens</li>
             </ul>
 
-            <h3 className={styles.sectionTitle} style={{ fontSize: '1.1rem' }}>6.3 Data Retention Period</h3>
+            <h3 className={styles.sectionTitle} style={{ fontSize: '1.1rem' }}>5.3 Data Retention Period</h3>
             <p className={styles.p}><strong>Purpose-Based Retention:</strong> We retain your personal information only for as long as necessary to fulfill the purposes for which it was collected, as disclosed to you at the time of collection.</p>
           </section>
 
           <section>
-            <h2 className={styles.sectionTitle}>7. Data Security</h2>
+            <h2 className={styles.sectionTitle}>6. Data Security</h2>
             <p className={styles.p}>We take the security of your personal information seriously and implement comprehensive technical and organizational measures to protect it against unauthorized access, alteration, disclosure, loss, or destruction, as required under the DPDPA.</p>
             <p className={styles.p}><strong>Security Limitations:</strong> While we implement industry-standard security measures, no method of electronic transmission or storage is 100% secure. We cannot guarantee absolute security of your data. You are responsible for maintaining the confidentiality of your account credentials and for any activity under your account.</p>
           </section>
 
           <section>
-            <h2 className={styles.sectionTitle}>8. Your Rights as a Data Principal (DPDPA)</h2>
+            <h2 className={styles.sectionTitle}>7. Your Rights as a Data Principal (DPDPA)</h2>
             <p className={styles.p}>Under the Digital Personal Data Protection Act, 2023, you have the following rights regarding your personal data:</p>
-            <h3 className={styles.sectionTitle} style={{ fontSize: '1.1rem' }}>8.1 Right to Access</h3>
+            <h3 className={styles.sectionTitle} style={{ fontSize: '1.1rem' }}>7.1 Right to Access</h3>
             <ul className={styles.list}>
               <li>You can access your personal information stored with us at any time through the App</li>
               <li>You may request a summary of personal data we hold about you</li>
               <li>You can request information about how your data is being processed</li>
             </ul>
-            <h3 className={styles.sectionTitle} style={{ fontSize: '1.1rem' }}>8.2 Right to Correction</h3>
+            <h3 className={styles.sectionTitle} style={{ fontSize: '1.1rem' }}>7.2 Right to Correction</h3>
             <ul className={styles.list}>
               <li>You can update and correct your profile information within the App</li>
               <li>You may request correction of inaccurate or incomplete personal data</li>
               <li>We will correct the data within a reasonable timeframe after verification</li>
             </ul>
-            <h3 className={styles.sectionTitle} style={{ fontSize: '1.1rem' }}>8.3 Right to Erasure (Right to be Forgotten)</h3>
+            <h3 className={styles.sectionTitle} style={{ fontSize: '1.1rem' }}>7.3 Right to Erasure (Right to be Forgotten)</h3>
             <ul className={styles.list}>
               <li>You have the right to request deletion of your personal data</li>
               <li>We will delete your data within 30 days of receiving a verified deletion request</li>

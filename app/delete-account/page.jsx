@@ -33,7 +33,7 @@ export default function DeleteAccountPage() {
       <section className={styles.container}>
         <h1 className={styles.title}>Request Account & Data Deletion</h1>
         <p className={styles.p} style={{ opacity: 0.9, marginBottom: '2rem' }}>
-          We respect your privacy. You can request deletion of your account and all associated data at any time by contacting us via email.
+          We respect your privacy. You may delete your account at any time by in-app linkage in Profile &gt; Settings &gt; Delete Account. Or you can request deletion of your account and all associated data at any time by contacting us via email.
         </p>
 
         <div style={{ display: 'grid', gap: '1.75rem' }}>

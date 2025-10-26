@@ -122,7 +122,7 @@ export default function TermsPage() {
               <li>Required by law or legal process</li>
               <li>Necessary to protect the Service, our rights, or other users</li>
             </ul>
-            <p className={styles.p}>You may delete your account at any time by in app linkage to delete account in profile section or following the instructions in our Privacy Policy or by contacting us at <em>contact@anantor.com</em>.</p>
+            <p className={styles.p}>You may delete your account at any time by in-app linkage in Profile &gt; Settings &gt; Delete Account or by contacting us at contact@anantor.com</p>
           </section>
 
           <section>
@@ -490,7 +490,7 @@ export default function TermsPage() {
           <section>
             <h2 className={styles.sectionTitle}>11. Term and Termination</h2>
             <h3 className={styles.p} style={{ fontWeight: 600, marginBottom: '0.5rem' }}>11.1 Term</h3>
-            <p className={styles.p}>These Terms commence on the date you first access or use the Service and continue until terminated in accordance with this Section 12.</p>
+            <p className={styles.p}>These Terms commence on the date you first access or use the Service and continue until terminated in accordance with this Section 11.</p>
             <h3 className={styles.p} style={{ fontWeight: 600, marginBottom: '0.5rem' }}>11.2 Termination by You</h3>
             <ul className={styles.list}>
               <li>Deleting your account through the app or by contacting us at <em>contact@anantor.com</em></li>

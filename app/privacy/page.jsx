@@ -250,6 +250,7 @@ export default function PrivacyPage() {
             </ul>
             <p className={styles.p}><strong>To Delete Your Account:</strong></p>
             <ul className={styles.list}>
+              <li>You may delete your account at any time by in-app linkage in Profile &gt; Settings &gt; Delete Account</li>
               <li>Visit our <Link href="/delete-account">Delete Account</Link> page for instructions or the in app linkage for account deletion</li>
               <li>Email us from your registered email address or phone number at <em>contact@anantor.com</em></li>
               <li>We will verify your identity before processing the deletion request</li>

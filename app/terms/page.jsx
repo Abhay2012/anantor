@@ -253,8 +253,8 @@ export default function TermsPage() {
             <p>If you grant contacts permission:</p>
             <ul className={styles.list}>
               <li>We will access names and phone numbers from your device address book</li>
-              <li>We will normalize phone numbers to a standard format (e.g., adding country codes)</li>
-              <li>We will securely transmit these normalized phone numbers to our servers</li>
+              <li>We will normalize phone numbers to a standard format and convert them to hash</li>
+              <li>We will securely transmit these hashed phone numbers to our servers</li>
               <li>We will match them against existing Anantor users</li>
               <li>You will be able to see which of your contacts use Anantor and send them friend requests</li>
               <li>Your contacts who use Anantor may see you in their suggested friends list</li>
@@ -269,7 +269,7 @@ export default function TermsPage() {
 
             <ul className={styles.list}>
               <li>We do not store your full address book on our servers permanently</li>
-              <li>We only store hashed or normalized phone numbers for matching purposes</li>
+              <li>We only store hashed phone numbers for matching purposes</li>
               <li>We do not share your contacts' information with third parties for marketing purposes</li>
               <li>Our use of contact information is governed by our Privacy Policy and the DPDPA</li>
             </ul>

@@ -69,7 +69,7 @@ export default function PrivacyPage() {
               <li>Contact names from your address book</li>
               <li>Phone numbers associated with those contacts</li>
             </ul>
-            <p className={styles.p}>We normalize phone numbers to a standard format and send them securely to our servers to match against existing Anantor users. You can deny or revoke this permission at any time through your device settings. The App remains fully functional if you choose not to grant contact access. You may withdraw this consent at any time, and withdrawal will not affect the lawfulness of processing based on consent before withdrawal.</p>
+            <p className={styles.p}>We normalize phone numbers to a standard format, convert them to hash and send these hash securely to our servers to match against existing Anantor users. You can deny or revoke this permission at any time through your device settings. The App remains fully functional if you choose not to grant contact access. You may withdraw this consent at any time, and withdrawal will not affect the lawfulness of processing based on consent before withdrawal.</p>
 
             <h3 className={styles.sectionTitle} style={{ fontSize: '1.1rem' }}>1.3 Device and Technical Information</h3>
             <p className={styles.p}>To ensure the App functions properly and securely, we automatically collect:</p>

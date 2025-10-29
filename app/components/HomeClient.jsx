@@ -106,11 +106,8 @@ export default function HomeClient() {
               </p>
 
               <div className={styles.storeButtons}>
-                <button className={styles.storeBtn} onClick={() => setShowModal(true)}>
+                <button className={styles.storeBtn} onClick={() => window.open("https://play.google.com/store/apps/details?id=com.yourcompany.anantor")}>
                   Get it on Google Play
-                </button>
-                <button className={styles.storeBtn} onClick={() => setShowModal(true)}>
-                  Download on App Store
                 </button>
               </div>
 

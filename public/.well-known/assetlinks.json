@@ -1,12 +1,16 @@
 [
-    {
-      "relation": ["delegate_permission/common.handle_all_urls"],
-      "target": {
-        "namespace": "android_app",
-        "package_name": "com.yourcompany.anantor",
-        "sha256_cert_fingerprints": [
-          "9C:4C:CE:9E:39:23:72:F9:F3:C7:D4:E6:06:BD:5B:D0:0A:98:D6:F4:38:61:90:1F:EB:45:02:11:79:FB:34:17"
-        ]
-      }
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls",
+      "delegate_permission/common.get_login_creds"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.yourcompany.anantor",
+      "sha256_cert_fingerprints": [
+        "9C:4C:CE:9E:39:23:72:F9:F3:C7:D4:E6:06:BD:5B:D0:0A:98:D6:F4:38:61:90:1F:EB:45:02:11:79:FB:34:17",
+        "42:F8:EC:5D:E0:71:C7:24:6B:63:86:3D:54:F4:91:88:07:92:04:24:53:92:45:A0:01:4F:F0:40:01:DC:76:CC"
+      ]
     }
-  ]
+  }
+]

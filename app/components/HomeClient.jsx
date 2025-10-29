@@ -309,12 +309,10 @@ export default function HomeClient() {
             <h3 className={styles['cta-title']}>Ready to Unlock Your Cosmic Blueprint?</h3>
             <p className={styles['cta-description']}>Download Anantor now and get your first personalized reading free. Your destiny awaits.</p>
             <div className={styles.storeButtons} style={{ justifyContent: "center" }}>
-                <button className={styles.storeBtn} onClick={() => setShowModal(true)}>
+                <button className={styles.storeBtn} onClick={() => window.open("https://play.google.com/store/apps/details?id=com.yourcompany.anantor")}>
                   Get it on Google Play
                 </button>
-                <button className={styles.storeBtn} onClick={() => setShowModal(true)}>
-                  Download on App Store
-                </button>
+          
               </div>
           </div>
         </div>
@@ -335,8 +333,8 @@ export default function HomeClient() {
               </div>
             </div>
             <div className={styles.stickyButtons}>
-              <button className={styles.stickyBtn} onClick={() => setShowModal(true)}>Play</button>
-              <button className={styles.stickyBtn} onClick={() => setShowModal(true)}>iOS</button>
+              <button className={styles.stickyBtn} onClick={() => window.open("https://play.google.com/store/apps/details?id=com.yourcompany.anantor")}>Play</button>
+
             </div>
           </div>
         </div>

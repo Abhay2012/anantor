@@ -66,12 +66,12 @@
 }
 
 .hero-title {
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: 800;
   line-height: 1.1;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   color: #fff;
-  text-align: left;
+  text-align: center;
 }
 
 .gradient-text {
@@ -96,14 +96,19 @@
 }
 
 .hero-description {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   line-height: 1.6;
   color: #99a1af;
   margin-bottom: 3rem;
-  max-width: 600px;
+  max-width: 90%;
   /* margin-left: auto;
   margin-right: auto; */
-  text-align: left;
+  text-align: center;
+}
+
+.hero-img {
+  max-width: 70%;
+    margin-top: 3rem;
 }
 
 .hero-buttons {
@@ -750,7 +755,7 @@
 .trustLabel { color: #6B7280; font-size: .85rem; text-align: left; }
 .storeButtons { display: flex; flex-wrap: wrap; gap: 1rem; }
 .storeBtn { background: linear-gradient(135deg, #EC4899, #7C3AED); color: #fff; border: none; border-radius: 12px; padding: .9rem 1.2rem; font-weight: 700; box-shadow: 0 10px 25px rgba(124,58,237,.35); cursor: pointer; transition: transform .2s ease, box-shadow .2s ease; }
-.storeBtn:hover { transform: translateY(-2px); box-shadow: 0 16px 34px rgba(124,58,237,.45); }
+.storeBtn:hover { transform: translateY(-2px); box-shadow: 0 8px 34px rgba(124,58,237,.45); }
 .scrollLink { margin-top: .5rem; color: #9CA3AF; background: none; border: none; cursor: pointer; }
 
 .heroRight { display: flex; justify-content: center; }

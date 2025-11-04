@@ -68,7 +68,7 @@ export default function HomeClient() {
       <Header showTopHeader />
 
       {/* Background: stars and glows */}
-      <div className={styles.starfield}>
+      {/* <div className={styles.starfield}>
         {stars.map((star) => (
           <div
             key={star.id}
@@ -84,7 +84,7 @@ export default function HomeClient() {
             }}
           />
         ))}
-      </div>
+      </div> */}
       <div className={styles.glowOrbs} aria-hidden="true">
         <div className={`${styles.orb} ${styles.orbPurple}`}></div>
         <div className={`${styles.orb} ${styles.orbPink}`}></div>
@@ -95,14 +95,13 @@ export default function HomeClient() {
       {/* Hero */}
       <section className={styles.hero}>
         <div className={styles.container}>
-          <div className={styles.heroGrid}>
-            <div className={styles.heroLeft}>
-              <div className={styles.badge}>AI-Powered Astrology</div>
+            {/* <div className={styles.heroLeft}> */}
+              {/* <div className={styles.badge}>AI-Powered Astrology</div> */}
               <h1 className={styles['hero-title']}>
                 <span className={styles['gradient-text']}>Discover Your Cosmic Path with AI Astrology</span>
               </h1>
               <p className={styles['hero-description']}>
-                Personalized Daily Horoscope, Compatibility & Future Predictions — powered by Ancient Vedic Wisdom and AI.
+                Personalized Daily Horoscope, Compatibility & Future Predictions - powered by Ancient Vedic Wisdom and AI.
               </p>
 
               <div className={styles.storeButtons}>
@@ -111,19 +110,11 @@ export default function HomeClient() {
                 </button>
               </div>
 
+              <img className={styles['hero-img']} src="hero_img.png" alt=""/>
               {/* <button onClick={scrollToFeatures} className={styles.scrollLink}>
                 Explore Features ↓
               </button> */}
-            </div>
-            <div className={styles.heroRight}>
-              <div className={styles.mockPhoneWrap}>
-                {/* <div className={styles['phone-mockup-device']}> */}
-                  <img src="https://images.unsplash.com/photo-1663153206186-1ccea6b8e9e9?auto=format&fit=crop&w=900&q=80" alt="Anantor App Mockups" className={styles['phone-mockup-image']} />
-                {/* </div> */}
-                <div className={styles.phoneGlow} aria-hidden="true"></div>
-              </div>
-            </div>
-          </div>
+            {/* </div> */}
         </div>
       </section>
 
@@ -137,115 +128,41 @@ export default function HomeClient() {
           <div className={styles.featuresGrid}>
             <div className={styles.featureCard}>
               <div className={styles.featureIcon}>✨</div>
-              <h3 className={styles.featureTitle}>Daily AI Horoscope</h3>
-              <p className={styles.featureText}>Get hyper-personalized insights based on your complete birth chart, not just your sun sign.</p>
+
+
+              <h3 className={styles.featureTitle}>Daily Personalized Horoscope</h3>
+              <p className={styles.featureText}>Get hyper personalized insights based on your complete birth chart, not just your sun sign</p>
               <ul className={styles.featureListBullets}>
-                <li>Detailed daily predictions</li>
-                <li>Career & love guidance</li>
-                <li>Planetary transit alerts</li>
+                <li>Daily forecasts tied to your rising sign and planetary transits</li>
+                <li>Align decisions with your strengths and transit windows</li>
+                <li>Practical tips for relationships, career, and rhythm of the day</li>
               </ul>
             </div>
+
             <div className={styles.featureCard}>
               <div className={styles.featureIcon}>💬</div>
-              <h3 className={styles.featureTitle}>24/7 AI Astrologer</h3>
-              <p className={styles.featureText}>Chat instantly with an AI astrologer trained on ancient Vedic wisdom and modern psychology.</p>
+              <h3 className={styles.featureTitle}>Ask Questions</h3>
+              <p className={styles.featureText}>Ask a question and get a clear astrological perspective based on Vedic wisdom</p>
               <ul className={styles.featureListBullets}>
-                <li>Unlimited questions</li>
-                <li>Instant detailed answers</li>
-                <li>Private & confidential</li>
+                <li>Unlimited Questions, private and confidential</li>
+                <li>Specific, goal-focused answers</li>
+                <li>Evidence-based: draws on your birth-chart and current transits</li>
               </ul>
             </div>
+
+            
+
             <div className={styles.featureCard}>
               <div className={styles.featureIcon}>💖</div>
-              <h3 className={styles.featureTitle}>Love Compatibility</h3>
-              <p className={styles.featureText}>Understand relationship dynamics through comprehensive birth chart analysis and synastry.</p>
+              <h3 className={styles.featureTitle}>Relationship Compatibility</h3>
+              <p className={styles.featureText}>Understand relationship dynamics through comprehensive birth chart analysis</p>
               <ul className={styles.featureListBullets}>
-                <li>Romantic compatibility</li>
-                <li>Friendship analysis</li>
-                <li>Family dynamics</li>
+                <li>What fuels the bond, potential friction, long-term compatibility signals</li>
+                <li>Practical tips for improving communication and conflict moments</li>
+                <li>Romantic compatibility, Friendship analysis and Family dynamics</li>
               </ul>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* Deep Dive Rows */}
-      <section className={styles.deepDiveSection}>
-        <div className={styles.container}>
-          <div className={styles.deepDiveRow}>
-            <div className={styles.deepDiveText}>
-              {/* <div className={styles.badge}>Feature 01</div> */}
-              <h2 className={styles.deepDiveTitle}>Your Daily Cosmic Insights</h2>
-              <p className={styles.deepDiveDesc}>Start each day with personalized guidance based on your complete birth chart. Our AI analyzes planetary positions to give you actionable insights for love, career, and personal growth.</p>
-              <ul className={styles.deepDiveBullets}>
-                <li>
-                  <strong>Personalized to your birth chart</strong>
-                  <span> Not generic zodiac predictions</span>
-                </li>
-                <li>
-                  <strong>Updated daily at sunrise</strong>
-                  <span> Fresh insights every morning</span>
-                </li>
-                <li>
-                  <strong>Lucky numbers & colors</strong>
-                  <span> Enhance your daily fortune</span>
-                </li>
-              </ul>
-            </div>
-            <div className={styles.deepDivePhone}>
-              <div className={styles['phone-mockup-device']}>
-                <img src="https://assets.anantor.com/Screenshot_1759431922.png" alt="Anantor App Mockups" className={styles['phone-mockup-image']} />
-              </div>
-              <div className={styles.phoneGlow} aria-hidden="true"></div>
-            </div>
-          </div>
-
-          <div className={`${styles.deepDiveRow} ${styles.deepDiveAlt}`}>
-            <div className={styles.deepDivePhone}>
-              <div className={styles['phone-mockup-device']}>
-                <img src="https://assets.anantor.com/Screenshot_1759589285.png" alt="Anantor App Mockups" className={styles['phone-mockup-image']} />
-              </div>
-              <div className={styles.phoneGlow} aria-hidden="true"></div>
-            </div>
-            <div className={styles.deepDiveText}>
-              {/* <div className={`${styles.badge} ${styles.badgePink}`}>Feature 02</div> */}
-              <h2 className={styles.deepDiveTitle}>Ask the Universe Anything</h2>
-              <p className={styles.deepDiveDesc}>No more waiting for astrologer appointments. Get instant answers from our AI trained on thousands of years of Vedic astrology knowledge, available 24/7.</p>
-              <ul className={styles.deepDiveBullets}>
-                <li><strong>Ask about love & relationships</strong> <span>Get clarity on your romantic path</span></li>
-                <li><strong>Career guidance & decisions</strong> <span>Navigate professional challenges</span></li>
-                <li><strong>Life purpose & spiritual growth</strong> <span>Discover your soul's mission</span></li>
-              </ul>
-            </div>
-          </div>
-          <div className={styles.deepDiveRow}>
-            <div className={styles.deepDiveText}>
-              {/* <div className={styles.badge}>Feature 03</div> */}
-              <h2 className={styles.deepDiveTitle}>Discover Cosmic Connections</h2>
-              <p className={styles.deepDiveDesc}>Understanding compatibility goes beyond sun signs. Our AI analyzes complete birth charts to reveal the deeper cosmic bonds between you and your loved ones.</p>
-              <ul className={styles.deepDiveBullets}>
-                <li>
-                  <strong>Comprehensive synastry analysis</strong>
-                  <span> All planetary aspects considered</span>
-                </li>
-                <li>
-                  <strong>Strengths & challenges revealed</strong>
-                  <span> Know what to nurture and navigate</span>
-                </li>
-                <li>
-                  <strong>Actionable relationship advice</strong>
-                  <span> Improve your connections</span>
-                </li>
-              </ul>
-            </div>
-            <div className={styles.deepDivePhone}>
-              <div className={styles['phone-mockup-device']}>
-                <img src="https://assets.anantor.com/Screenshot_1758845474.png" alt="Anantor App Mockups" className={styles['phone-mockup-image']} />
-              </div>
-              <div className={styles.phoneGlow} aria-hidden="true"></div>
-            </div>
-          </div>
-
         </div>
       </section>
 

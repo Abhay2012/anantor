@@ -4,7 +4,7 @@ import styles from './Footer.module.css'
 export default function Footer() {
   return (
     <footer className={styles.footer}>
-      <div className={styles.container} style={{ display: 'flex', justifyContent: 'center', marginBottom: '15px' }}>
+      <div className={styles.container} style={{ display: 'flex', justifyContent: 'flex-end', marginBottom: '15px' }}>
         <a href="https://www.instagram.com/anantor_astrologyapp/"><img style={{ width: '30px', marginRight: '15px' }} src="insta-icon.png" /></a>
         {/* <img style={{ width: '30px' }} src="insta-icon.png" /> */}
       </div>

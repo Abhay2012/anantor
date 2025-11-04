@@ -68,7 +68,7 @@ export default function FeaturesPage() {
                     </div>
                 </div>
             </section>
-            <section className={styles.container}>
+            {/* <section className={styles.container}>
                 <div className={homeStyles['section-content']}>
                     <div id="feature-horoscope" className={[homeStyles['feature-item'], styles['feature-item']].join(' ')}>
                         <div className={homeStyles['feature-item-text']}>
@@ -135,7 +135,87 @@ export default function FeaturesPage() {
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> */}
+
+<section className={styles.deepDiveSection}>
+        <div className={styles.container}>
+          <div id="feature-horoscope" className={styles.deepDiveRow}>
+            <div className={styles.deepDiveText}>
+              {/* <div className={styles.badge}>Feature 01</div> */}
+              <h2 className={styles.deepDiveTitle}>Your Daily Cosmic Insights</h2>
+              <p className={styles.deepDiveDesc}>Start each day with personalized guidance based on your complete birth chart. Our AI analyzes planetary positions to give you actionable insights for love, career, and personal growth.</p>
+              <ul className={styles.deepDiveBullets}>
+                <li>
+                  <strong>Personalized to your birth chart</strong>
+                  <span> Not generic zodiac predictions</span>
+                </li>
+                <li>
+                  <strong>Updated daily at sunrise</strong>
+                  <span> Fresh insights every morning</span>
+                </li>
+                <li>
+                  <strong>Lucky numbers & colors</strong>
+                  <span> Enhance your daily fortune</span>
+                </li>
+              </ul>
+            </div>
+            <div className={styles.deepDivePhone}>
+              <div className={styles['phone-mockup-device']}>
+                <img src="https://assets.anantor.com/Screenshot_1759431922.png" alt="Anantor App Mockups" className={styles['phone-mockup-image']} />
+              </div>
+              <div className={styles.phoneGlow} aria-hidden="true"></div>
+            </div>
+          </div>
+
+          <div id="feature-ask" className={`${styles.deepDiveRow} ${styles.deepDiveAlt}`}>
+            <div className={styles.deepDivePhone}>
+              <div className={styles['phone-mockup-device']}>
+                <img src="https://assets.anantor.com/Screenshot_1759589285.png" alt="Anantor App Mockups" className={styles['phone-mockup-image']} />
+              </div>
+              <div className={styles.phoneGlow} aria-hidden="true"></div>
+            </div>
+            <div className={styles.deepDiveText}>
+              {/* <div className={`${styles.badge} ${styles.badgePink}`}>Feature 02</div> */}
+              <h2 className={styles.deepDiveTitle}>Ask the Universe Anything</h2>
+              <p className={styles.deepDiveDesc}>No more waiting for astrologer appointments. Get instant answers from our AI trained on thousands of years of Vedic astrology knowledge, available 24/7.</p>
+              <ul className={styles.deepDiveBullets}>
+                <li><strong>Ask about love & relationships</strong> <span>Get clarity on your romantic path</span></li>
+                <li><strong>Career guidance & decisions</strong> <span>Navigate professional challenges</span></li>
+                <li><strong>Life purpose & spiritual growth</strong> <span>Discover your soul's mission</span></li>
+              </ul>
+            </div>
+          </div>
+          <div id="feature-compatibility" className={styles.deepDiveRow}>
+            <div className={styles.deepDiveText}>
+              {/* <div className={styles.badge}>Feature 03</div> */}
+              <h2 className={styles.deepDiveTitle}>Discover Cosmic Connections</h2>
+              <p className={styles.deepDiveDesc}>Understanding compatibility goes beyond sun signs. Our AI analyzes complete birth charts to reveal the deeper cosmic bonds between you and your loved ones.</p>
+              <ul className={styles.deepDiveBullets}>
+                <li>
+                  <strong>Comprehensive synastry analysis</strong>
+                  <span> All planetary aspects considered</span>
+                </li>
+                <li>
+                  <strong>Strengths & challenges revealed</strong>
+                  <span> Know what to nurture and navigate</span>
+                </li>
+                <li>
+                  <strong>Actionable relationship advice</strong>
+                  <span> Improve your connections</span>
+                </li>
+              </ul>
+            </div>
+            <div className={styles.deepDivePhone}>
+              <div className={styles['phone-mockup-device']}>
+                <img src="https://assets.anantor.com/Screenshot_1758845474.png" alt="Anantor App Mockups" className={styles['phone-mockup-image']} />
+              </div>
+              <div className={styles.phoneGlow} aria-hidden="true"></div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
 
             <Footer />
         </div>

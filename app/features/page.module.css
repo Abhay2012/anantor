@@ -5,7 +5,7 @@
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 90%;
     margin: 0 auto;
     padding: 2rem 1rem;
     color: #e5e7eb;
@@ -153,6 +153,61 @@
   background-clip: text; */
 }
 
+/* Deep Dive */
+.deepDiveSection { padding: 5rem 0; position: relative; z-index: 2; }
+.deepDiveRow { display: grid; grid-template-columns: 1fr; gap: 2rem; align-items: center; margin-bottom: 4rem; }
+.deepDiveText { display: flex; flex-direction: column; align-items: flex-start; }
+.deepDiveTitle { font-size: 2.8rem; line-height: 1.15; background: linear-gradient(135deg,#6B46C1,#EC4899); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; font-weight: 400; }
+.deepDiveDesc { color: #9CA3AF; font-size: 1.25rem; max-width: 60ch; margin: 1.5rem 0; }
+.deepDiveBullets { display: grid; gap: .9rem; margin-top: 1rem; list-style: none; padding-left: 0; }
+.deepDiveBullets li { position: relative; padding-left: 3rem; }
+/* icon container */
+.deepDiveBullets li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  /* top: .15rem; */
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 8px;
+  background: rgba(167,139,250,.12);
+  /* border: 1px solid rgba(167,139,250,.3); */
+  box-shadow: 0 8px 24px rgba(124,58,237,.15) inset;
+}
+/* tick inside */
+.deepDiveBullets li::after {
+  content: '';
+  position: absolute;
+  left: .62rem;
+  top: .55rem;
+  width: 1.2rem;
+  height: 1.2rem;
+  background-color: #A78BFA; /* purple */
+  -webkit-mask: url('/tick.svg') no-repeat center / contain;
+  mask: url('/tick.svg') no-repeat center / contain;
+}
+
+.phone-mockup-device {
+  width: 265px;
+  height: 580px;
+  background: linear-gradient(145deg, #1a1a1a, #2d2d2d);
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, .5);
+  position: relative;
+}
+
+.phone-mockup-image {
+  width: 100%;
+  height: 100%;
+}
+
+/* two-line text styling */
+.deepDiveBullets li strong { display: block; color: #F3F4F6; font-weight: 700; }
+.deepDiveBullets li span { display: block; color: #9CA3AF; font-size: .95rem; margin-top: .15rem; }
+.deepDivePhone { position: relative; display: flex; justify-content: center; }
+.phonePlaceholder { height: 100%; display:flex; align-items:center; justify-content:center; color: #C4B5FD; background: linear-gradient(135deg, rgba(167,139,250,.15), rgba(236,72,153,.15)); border-radius: 1.5rem; border: 1px solid rgba(167,139,250,.35); }
+
 .cardDesc {
   color: #C7AAFF;
   line-height: 1.6;
@@ -168,4 +223,8 @@
 
 @media (max-width: 768px) {
   .app {padding-top: 2rem; }
+}
+
+@media (min-width: 768px) {
+  .deepDiveRow { grid-template-columns: 1fr 1fr; gap: 3rem; }
 }

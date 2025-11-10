@@ -4,7 +4,7 @@ import styles from './Footer.module.css'
 export default function Footer() {
   return (
     <footer className={styles.footer}>
-      <div className={styles.container} style={{ display: 'flex', justifyContent: 'flex-end', marginBottom: '15px' }}>
+      <div className={styles.socialIcons}>
         <a href="https://www.instagram.com/anantor_astrologyapp/" target='_blank'><img style={{ height: '30px', marginRight: '15px' }} src="insta-icon.png" /></a>
         <a href="https://x.com/anantor_app" target='_blank'><img style={{ height: '30px', marginRight: '15px' }} src="x-social-media-white-icon.png" /></a>
         <a href="https://www.youtube.com/@Anantor-astro" target='_blank'><img style={{ height: '30px' }} src="youtube-shorts-white-icon.webp" /></a>

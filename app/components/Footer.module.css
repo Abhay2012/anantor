@@ -13,9 +13,19 @@
   justify-content: space-between;
   align-items: center;
 }
+
+.socialIcons {
+display: flex;
+justify-content: flex-end;
+margin-bottom: 15px;
+max-width: 1200px;
+margin: 0 auto;
+}
+
  .link { color: #C7AAFF; text-decoration: underline; margin-left: 0.75rem; }
  .links { margin-top: 0.5rem; }
 
  @media (max-width: 768px) {
   .container { flex-direction: column; }
+  .socialIcons { justify-content: center;margin-bottom: 10px; }
 }

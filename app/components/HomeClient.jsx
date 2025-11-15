@@ -110,7 +110,7 @@ export default function HomeClient() {
                 </button>
               </div>
 
-              <img className={styles['hero-img']} src="hero_img.png" alt=""/>
+              <img className={styles['hero-img']} src="hero_img.png" alt="Anantor App Screens"/>
               {/* <button onClick={scrollToFeatures} className={styles.scrollLink}>
                 Explore Features ↓
               </button> */}

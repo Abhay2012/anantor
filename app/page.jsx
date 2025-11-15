@@ -1,7 +1,7 @@
 export const dynamic = 'force-static'
 export const metadata = {
   title: 'Anantor - Astrology App for Daily Predictions & Cosmic Compatibility',
-  description: 'Connect with the planets through Anantor. Get daily astrology predictions, ask questions about your future, and discover compatibility with friends. Free astrology app for teens and beyond.',
+  description: 'Connect with the planets through Anantor. Get daily free astrology predictions, ask questions about your future and check compatibility with friends.',
   keywords: [
     'astrology app',
     'daily horoscope',
@@ -25,7 +25,7 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Anantor - Astrology App for Daily Predictions & Cosmic Compatibility',
-    description: 'Connect with the planets through Anantor. Get daily astrology predictions, ask questions about your future, and discover compatibility with friends.',
+    description: 'Connect with the planets through Anantor. Get daily free astrology predictions, ask questions about your future and check compatibility with friends.',
     images: ['/text-logo.png'],
   },
 }

@@ -6,11 +6,11 @@ import styles from './page.module.css'
 export const dynamic = 'force-static'
 export const metadata = {
   title: 'Terms and Conditions - Anantor Astrology App',
-  description: 'Read the Terms and Conditions governing your use of the Anantor mobile application and services.',
+  description: 'Read the Terms and Conditions governing your use of the Anantor free astrology mobile application and services.',
   keywords: ['astrology app terms', 'terms and conditions', 'anantor terms'],
   openGraph: {
     title: 'Terms and Conditions - Anantor Astrology App',
-    description: 'Read the Terms and Conditions governing your use of the Anantor mobile application and services.',
+    description: 'Read the Terms and Conditions governing your use of the Anantor free astrology mobile application and services.',
     url: 'https://www.anantor.com/terms',
     siteName: 'Anantor',
     images: [
@@ -22,7 +22,7 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Terms and Conditions - Anantor Astrology App',
-    description: 'Read the Terms and Conditions governing your use of the Anantor mobile application and services.',
+    description: 'Read the Terms and Conditions governing your use of the Anantor free astrology mobile application and services.',
     images: ['/text-logo.png'],
   },
 }

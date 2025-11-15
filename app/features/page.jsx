@@ -6,7 +6,7 @@ import homeStyles from '../home.module.css'
 export const dynamic = 'force-static'
 export const metadata = {
   title: "Anantor Features: Daily Horoscope, Cosmic Q&A & Friend Compatibility",
-  description: "Explore Anantor's three powerful features—personalized daily horoscopes with Today's Forecast, unlimited cosmic questions across 5 categories, and detailed friend compatibility insights.",
+  description: "Explore Anantor's three powerful features—personalized daily horoscopes, cosmic questions, and friend compatibility insights.",
   keywords: [
     'astrology app features',
     'personalized horoscope',

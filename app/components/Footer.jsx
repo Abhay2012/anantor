@@ -20,6 +20,7 @@ export default function Footer() {
           <Link href="/terms" className={styles.link}>Terms</Link>
           <Link href="/disclaimer" className={styles.link}>Disclaimer</Link>
           <Link href="/contact-us" className={styles.link}>Support</Link>
+          <Link href="https://medium.com/@anantorapp" target='_blank' className={styles.link}>Blogs</Link>
         </div>
       </div>
     </footer>

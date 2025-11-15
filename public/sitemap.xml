@@ -36,4 +36,10 @@
     <changefreq>weekly</changefreq>
     <priority>0.4</priority>
   </url>
+    <url>
+    <loc>https://www.anantor.com/terms</loc>
+    <lastmod>2025-11-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.4</priority>
+  </url>
 </urlset>

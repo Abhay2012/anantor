@@ -6,6 +6,18 @@ export async function GET(request) {
 
   // 1. Call tracking API before redirecting
   try {
+    // Extract client metadata from headers
+    const userAgent = request.headers.get('user-agent') || 'unknown';
+    const referrer = request.headers.get('referer') || 'direct';
+    const ip = request.headers.get('x-forwarded-for')?.split(',')[0] || 'unknown';
+
+    const trackingPayload = {
+      ...params,
+      user_agent: userAgent,
+      referer: referrer,
+      ip: ip,
+    };
+
     // We use a timeout to ensure tracking doesn't hang the redirect indefinitely
     const controller = new AbortController();
     const timeoutId = setTimeout(() => controller.abort(), 2000);
@@ -15,7 +27,7 @@ export async function GET(request) {
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify(params),
+      body: JSON.stringify(trackingPayload),
       signal: controller.signal,
     });
     

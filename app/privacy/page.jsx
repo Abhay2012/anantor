@@ -13,7 +13,7 @@ export const metadata = {
     url: 'https://www.anantor.com/privacy',
     siteName: 'Anantor',
     images: [
-      { url: '/text-logo.png', width: 1200, height: 630, alt: 'Anantor' },
+      { url: '/og-image.png', width: 1200, height: 630, alt: 'Anantor' },
     ],
     locale: 'en_US',
     type: 'website',
@@ -22,7 +22,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Privacy Policy - Anantor Astrology App',
     description: 'Learn how Anantor protects your personal data, birth information, and cosmic insights.',
-    images: ['/text-logo.png'],
+    images: ['/og-image.png'],
   },
 }
 

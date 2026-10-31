@@ -15,7 +15,7 @@ export const metadata = {
       'Astrology and AI-powered interpretations provided by Anantor are informational and entertainment-oriented, not professional advice.',
     url: 'https://www.anantor.com/disclaimer',
     siteName: 'Anantor',
-    images: [{ url: '/text-logo.png', width: 1200, height: 630, alt: 'Anantor' }],
+    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'Anantor' }],
     locale: 'en_US',
     type: 'website',
   },
@@ -24,7 +24,7 @@ export const metadata = {
     title: 'Disclaimer - Anantor Astrology App',
     description:
       'Astrology and AI-powered interpretations provided by Anantor are informational and entertainment-oriented, not professional advice.',
-    images: ['/text-logo.png'],
+    images: ['/og-image.png'],
   },
 }
 

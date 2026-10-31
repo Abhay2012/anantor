@@ -21,7 +21,7 @@ export const metadata = {
     url: 'https://www.anantor.com/features',
     siteName: 'Anantor',
     images: [
-      { url: '/text-logo.png', width: 1200, height: 630, alt: 'Anantor' },
+      { url: '/og-image.png', width: 1200, height: 630, alt: 'Anantor' },
     ],
     locale: 'en_US',
     type: 'website',
@@ -30,7 +30,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Anantor Features: Daily Horoscope, Cosmic Q&A & Friend Compatibility',
     description: "Explore Anantor's powerful features—horoscope, Q&A, and compatibility.",
-    images: ['/text-logo.png'],
+    images: ['/og-image.png'],
   },
 }
 

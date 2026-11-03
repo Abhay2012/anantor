@@ -32,66 +32,6 @@ function previewHtml(url) {
 
 const IOS_REGEX = /iphone|ipad|ipod/i;
 
-function iosHtml() {
-  return `<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Anantor is on Android</title>
-<meta name="robots" content="noindex">
-<link rel="icon" href="/favicon.ico">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-<style>
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 24px 16px;
-    background: #000;
-    color: #fff;
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    -webkit-font-smoothing: antialiased;
-    text-align: center;
-  }
-  .card { max-width: 420px; width: 100%; }
-  .logo { height: 36px; margin-bottom: 40px; }
-  h1 {
-    font-size: 1.75rem;
-    font-weight: 800;
-    line-height: 1.25;
-    margin-bottom: 16px;
-    background: linear-gradient(135deg, #EC4899, #A78BFA, #22D3EE);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-  }
-  p { color: #CBD5E1; font-size: 1rem; line-height: 1.6; margin-bottom: 32px; }
-  .cta {
-    display: inline-block;
-    padding: 14px 32px;
-    border-radius: 999px;
-    background: linear-gradient(135deg, #6B46C1, #EC4899);
-    color: #fff;
-    font-weight: 600;
-    font-size: 1rem;
-    text-decoration: none;
-  }
-</style>
-</head>
-<body>
-  <main class="card">
-    <img class="logo" src="/text-logo.png" alt="Anantor">
-    <h1>Anantor is currently available on Android only</h1>
-    <p>We're not on the App Store yet. In the meantime, explore what Anantor can do for you.</p>
-    <a class="cta" href="/">Explore Anantor</a>
-  </main>
-</body>
-</html>`;
-}
-
 export async function GET(request) {
   const { searchParams } = new URL(request.url);
   const params = Object.fromEntries(searchParams.entries());
@@ -136,11 +76,9 @@ export async function GET(request) {
     // We continue with the redirect even if tracking fails to ensure user experience
   }
 
-  // 2. The app is Android-only, so iOS users get a message page instead of the Play Store
+  // 2. The app is Android-only, so iOS users are sent to a message page instead of the Play Store
   if (IOS_REGEX.test(request.headers.get('user-agent') || '')) {
-    return new Response(iosHtml(), {
-      headers: { 'Content-Type': 'text/html; charset=utf-8', 'Cache-Control': 'no-store' },
-    });
+    return Response.redirect(new URL('/android-only', request.url).toString(), 302);
   }
 
   // 3. Construct the Play Store URL with all original query parameters
